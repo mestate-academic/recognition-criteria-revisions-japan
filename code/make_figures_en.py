@@ -61,10 +61,10 @@ a.bar(xb,B.oth,0.72,bottom=B.ge80+B.lt80,color=AQUA,label='Approved without exam
 for xx,v,tot in zip(xb,M.values,B.sum(1).values): a.text(xx,tot+18,f'{v:.0f}%',ha='center',fontsize=11,color=INK)
 for xx,t in revs[1:]: rev(a,xx)
 a.set_title('C  Approvals by monthly overtime category',loc='left'); a.set_ylabel('Approved claims'); a.set_ylim(0,1250); a.set_xlim(2016.4,2025.6)
-h,l=a.get_legend_handles_labels(); a.legend(h[::-1],l[::-1],frameon=False,loc='upper left',fontsize=12); a.grid(axis='x',visible=False)
+h,l=a.get_legend_handles_labels(); lg=a.legend(h[::-1],l[::-1],frameon=True,loc='upper left',fontsize=12,framealpha=1,edgecolor='none'); lg.set_zorder(5); a.grid(axis='x',visible=False)
 a=ax[1,1]; p=pt[pt.fy>=S]
 a.plot(p.fy,p.days,'-',color=BLUE,lw=2); a.plot(p.fy,p.days,'o',color=BLUE,ms=7,mec='white',mew=1.2)
-a.axhline(240,color=INK,lw=1,ls=':'); a.text(2020.4,232,'Standard: 240 days',fontsize=12,color=INK)
+a.axhline(240,color=INK,lw=1,ls=':'); a.text(2012.4,242,'Standard: 8 months (≈240 days)',fontsize=12,color=INK,va='bottom')
 for xx,t in revs: rev(a,xx)
 a.set_title('D  Mean days from claim to decision',loc='left'); a.set_ylabel('Days'); a.set_ylim(180,300)
 for a in ax.flat: a.xaxis.set_major_locator(MaxNLocator(integer=True)); a.set_xlabel('Fiscal year')
