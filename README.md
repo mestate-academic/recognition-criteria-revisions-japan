@@ -35,20 +35,21 @@ bash run_all.sh
 | 3 Robustness | `code/analyze2.py` | `output/results_v2.txt`: interrupted time series sensitivity analyses (window, transition-year coding, slope change, Newey–West, placebo years) and the industry analysis of the 2023 revision (wild cluster score bootstrap with Webb weights, seed 20261109; permutation of industry labels). |
 | 4 Main estimates | `code/analyze4_unified.py` | `output/results_v3_unified.txt`: all main estimates for the common window FY2009–2025. This covers Table I, Table II (including the ranking of the actual timing, in-time placebo windows and the 80–100 h contrast) and the ratio models in Table IV. |
 | 5 Revision 1 | `code/analyze6_revision1.py` | `output/results_v4_revision1.txt`: CCVD approvals by evaluation period (Table III), contrasts within evaluation periods, alternative inference for the main contrast (year-clustered and Newey–West standard errors), and the sensitivity of the evaluation-period contrast (Table S5). Added after pre-submission review (post hoc). |
-| 6 Figures | `code/make_figures_en.py` | `output/AJIM_Figure1`–`AJIM_Figure3` (`.png` and `.tif`) |
+| 6 Figures | `code/make_figures_en.py` | `output/AJIM_Figure1`–`AJIM_Figure3` (`.png` for viewing; `.tif`, RGB 600 dpi, for submission) |
 
-### Where each number in the paper comes from
+### Where each number in the paper comes from (manuscript v4)
 
 | Paper | Source |
 |---|---|
-| Table I, decomposition and level changes | `results_v3_unified.txt` sections A and B (CCVD and the three mental disorder steps); mental disorder period means in `output/A_decomposition.csv` |
-| Table II | `results_v3_unified.txt` section C; alternative inference in `results_v4_revision1.txt` section 3 |
-| Table III and Figure 3B–C (evaluation periods) | `results_v4_revision1.txt` sections 1–2 |
-| Table S5 (sensitivity of the evaluation-period contrast) | `results_v4_revision1.txt` section 4 |
+| Table I, totals and level changes | `results_v3_unified.txt` sections A and B; mental disorder period means in `output/A_decomposition.csv` |
+| Table II, composition of CCVD approvals | `results_v3_unified.txt` section C; standard errors clustered by year and Newey–West in `results_v4_revision1.txt` section 3 |
+| Table III and Figure 3 (evaluation periods) | `results_v4_revision1.txt` sections 1–2 |
 | Table IV | `data/mental_overtime_bands.csv`, `data/mental_processing_time.csv`; ratio changes in `results_v3_unified.txt` section D |
-| Share below either threshold, FY2017–2025 | `results_v1.txt` section C; `results_v4_revision1.txt` section 1 |
-| Table S2 (sensitivity of interrupted time series) | `results_v3_unified.txt` section B (CCVD main and no-trend models); `results_v2.txt` sections I and I2 (other windows and the mental disorder sensitivity analyses) |
-| Table S3 (industries) | `results_v2.txt` section J |
+| Table S2 (data sources) | `data/DATA_DICTIONARY.md` |
+| Table S3 (sensitivity of interrupted time series) | `results_v3_unified.txt` section B; `results_v2.txt` sections I and I2 |
+| Table S4 (sensitivity of the evaluation-period comparison) | `results_v4_revision1.txt` section 4 |
+
+Some outputs are not reported in manuscript v4 but are kept for transparency: the ranking of the actual timing among all 1,820 assignments of post-revision years (`results_v3_unified.txt` section C), the target redefined as <100 hours (section C), and the exploratory industry comparison for the 2023 mental disorder revision (`results_v2.txt` section J).
 
 ## Analysis in brief
 

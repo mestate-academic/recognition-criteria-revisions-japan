@@ -23,7 +23,7 @@ def rev(ax,x,label=None,y=None):
 fig,ax=plt.subplots(1,2,figsize=(15,5.8))
 a=ax[0]; x=G.index.values; w=0.78
 a.bar(x,G.ge80,w,color=BLUE,label='≥80 h/month',edgecolor='white',linewidth=1)
-a.bar(x,G.lt80,w,bottom=G.ge80,color=ORANGE,label='<80 h/month (target of revision)',edgecolor='white',linewidth=1)
+a.bar(x,G.lt80,w,bottom=G.ge80,color=ORANGE,label='<80 h/month',edgecolor='white',linewidth=1)
 a.bar(x,G.oth,w,bottom=G.ge80+G.lt80,color=AQUA,label='Short-term overload / extraordinary event',edgecolor='white',linewidth=1)
 rev(a,2021.5,'Revision (Sep 2021)',412)
 a.set_title('A  Approved claims by overtime category',loc='left'); a.set_ylabel('Approved claims'); a.set_ylim(0,425)
@@ -71,38 +71,27 @@ for a in ax.flat: a.xaxis.set_major_locator(MaxNLocator(integer=True)); a.set_xl
 ax[1,1].set_xlim(S-0.5,2025.5); ax[0,0].set_xlim(2008.5,2025.5); ax[0,1].set_xlim(2008.5,2025.5)
 plt.tight_layout(); plt.savefig(O+'AJIM_Figure2.png',dpi=200); plt.savefig(O+'AJIM_Figure2.tif',dpi=600,pil_kwargs={'compression':'tiff_lzw'}); plt.close()
 
-# ---------- 図3 頑健性と評価期間別の構成 ----------
+# ---------- 図3 評価期間別の構成と比の変化（v4：並べ替え検定のパネルは削除） ----------
 def save(fig,name):
     fig.savefig(O+name+'.png',dpi=200)
     fig.savefig(O+name+'.tif',dpi=600,pil_kwargs={'compression':'tiff_lzw'})
-W=oc[oc.fy!=2021].groupby(['fy','g']).n.sum().unstack(); W['lr']=np.log(W.lt80/W.ge80); yrs=W.index.values; pm=yrs>=2022
-obs=W.lr[pm].mean()-W.lr[~pm].mean(); diffs=[]
-for c in itertools.combinations(range(len(yrs)),pm.sum()):
-    mm=np.zeros(len(yrs),bool); mm[list(c)]=True; diffs.append(W.lr[mm].mean()-W.lr[~mm].mean())
-diffs=np.exp(np.array(diffs))
-fig=plt.figure(figsize=(15,11.5))
-a=fig.add_axes([0.07,0.58,0.39,0.37]); a.hist(diffs,bins=40,color=BLUE,edgecolor='white',linewidth=0.8)
-a.axvline(np.exp(obs),color=ORANGE,lw=2.5); a.text(np.exp(obs)-0.08,a.get_ylim()[1]*0.85,f'Actual timing\n{np.exp(obs):.1f}-fold',ha='right',fontsize=13,color=INK)
-a.text(np.exp(obs)-0.08,a.get_ylim()[1]*0.60,f'Largest of {len(diffs):,}\nassignments',ha='right',fontsize=13,color=INK)
-a.set_title('A  Ranking of the actual timing',loc='left',fontsize=15); a.set_xlabel('Change in ratio, <80 h : ≥80 h (fold)'); a.set_ylabel('Number of assignments')
-# B: composition by evaluation period
+fig=plt.figure(figsize=(15,12))
 LO=['lt45','45_60','60_80']; HI=['100_120','120_140','140_160','ge160']
 e=ot[(ot.fy>=2017)&ot.period.isin(['m1','m26'])].copy()
 def grp(r):
     if r.period=='m1': return 'm1_lt100' if r.band in LO+['80_100'] else 'm1_ge100'
     return 'm26_80_100' if r.band=='80_100' else ('m26_lt80' if r.band in LO else 'm26_ge100')
 e['g']=e.apply(grp,axis=1); T=e.groupby(['fy','g']).n.sum().unstack()
-a=fig.add_axes([0.58,0.58,0.39,0.37]); xs=T.index.values
+a=fig.add_axes([0.08,0.57,0.62,0.38]); xs=T.index.values
 ser=[('m26_80_100','2–6 months: 80–100 h',AQUA,'-','s'),('m26_lt80','2–6 months: <80 h',ORANGE,'-','o'),('m26_ge100','2–6 months: ≥100 h',BLUE,'-','D'),
      ('m1_ge100','1 month: ≥100 h',BLUE,'--','^'),('m1_lt100','1 month: <100 h',ORANGE,'--','v')]
 for k,lab,c,ls,mk in ser:
-    a.plot(xs,T[k],ls,color=c,lw=2); a.plot(xs,T[k],mk,color=c,ms=7,mec='white',mew=1.2,label=lab)
-rev(a,2021.5,'Revision',118)
-a.set_title('B  Approvals by evaluation period, FY2017–2025',loc='left',fontsize=15); a.set_ylabel('Approved claims'); a.set_ylim(0,120)
-a.set_xticks(range(2017,2026)); a.set_xticklabels([str(v) if v%2==1 else '' for v in range(2017,2026)]); a.set_xlabel('Fiscal year')
-a.legend(frameon=False,fontsize=11.5,loc='upper right',bbox_to_anchor=(1.0,0.93),ncol=1)
-# C: forest plot
-a=fig.add_axes([0.34,0.07,0.63,0.40])
+    a.plot(xs,T[k],ls,color=c,lw=2.2,marker=mk,ms=8,mec='white',mew=1.2,label=lab)
+rev(a,2021.5,'Revision (Sep 2021)',118)
+a.set_title('A  Approvals by evaluation period, FY2017–2025',loc='left',fontsize=16); a.set_ylabel('Approved claims per year'); a.set_ylim(0,120)
+a.set_xticks(range(2017,2026)); a.set_xlabel('Fiscal year')
+a.legend(frameon=False,fontsize=13,loc='upper left',bbox_to_anchor=(1.01,1.0))
+a=fig.add_axes([0.40,0.06,0.42,0.38])
 def rr(d,f='n ~ C(fy)+tg+tg:post'):
     m=smf.glm(f,data=d,family=sm.families.Poisson()).fit(scale='X2'); c=m.conf_int().loc['tg:post']; return np.exp([m.params['tg:post'],c[0],c[1]])
 base=oc[oc.fy!=2021].copy(); base['post']=(base.fy>=2022).astype(int)
@@ -115,23 +104,23 @@ def mkp(tg,rf):
     return rr(x[(x.tg==1)|(x.rf==1)].groupby(['fy','tg','post']).n.sum().reset_index())
 dt=pd.read_csv(D+'cvd_by_type.csv'); g=dt[(dt.fy>=S)&(dt.fy!=2021)].copy(); g['post']=(g.fy>=2022).astype(int); g['tg']=(g.type=='虚血性心疾患等').astype(int); g['n']=g.approvals
 hi80=['80_100']+HI
-rows=[('<80 h vs ≥80 h, combined periods (main)',mk(LO,hi80),ORANGE),
-      ('Below either threshold vs above, by period*',mkp(lambda r:(r.period=='m1' and r.band in LO+['80_100']) or (r.period=='m26' and r.band in LO),
+rows=[('<80 h vs ≥80 h (main)',mk(LO,hi80),ORANGE),
+      ('Below vs above the threshold\nof each evaluation period*',mkp(lambda r:(r.period=='m1' and r.band in LO+['80_100']) or (r.period=='m26' and r.band in LO),
                                                 lambda r:(r.period=='m1' and r.band in HI) or (r.period=='m26' and r.band in hi80)),ORANGE),
       ('2–6 months: <80 h vs ≥100 h*',mkp(lambda r:r.period=='m26' and r.band in LO,lambda r:r.period=='m26' and r.band in HI),ORANGE),
-      ('Short-term overload/extraordinary events vs ≥80 h',mk(['other'],hi80),ORANGE),
-      ('80–100 h vs ≥100 h, combined periods',mk(['80_100'],HI),BLUE),
+      ('Short-term overload or\nextraordinary event vs ≥80 h',mk(['other'],hi80),ORANGE),
+      ('80–100 h vs ≥100 h',mk(['80_100'],HI),BLUE),
       ('2–6 months: 80–100 h vs ≥100 h*',mkp(lambda r:r.period=='m26' and r.band=='80_100',lambda r:r.period=='m26' and r.band in HI),BLUE),
       ('Cardiac vs cerebrovascular disease',rr(g[['fy','tg','post','n']]),BLUE)]
 yy=np.arange(len(rows))[::-1]
 for (lab,(e_,l,h),c),y in zip(rows,yy):
     a.plot([l,h],[y,y],color=c,lw=2.5); a.plot(e_,y,'o',color=c,ms=10,mec='white',mew=1.5)
-    a.text(h*1.08,y,f'{e_:.2f} ({l:.2f}–{h:.2f})',va='center',fontsize=13,color=INK)
-a.axvline(1,color=INK,lw=1); a.set_xscale('log'); a.set_xlim(0.3,30); a.set_xticks([0.5,1,2,4,8]); a.set_xticklabels(['0.5','1','2','4','8'])
+    a.text(1.02,y,f'{e_:.2f} ({l:.2f}–{h:.2f})',va='center',fontsize=13,color=INK,transform=a.get_yaxis_transform())
+a.axvline(1,color=INK,lw=1); a.set_xscale('log'); a.set_xlim(0.3,12); a.set_xticks([0.5,1,2,4,8]); a.set_xticklabels(['0.5','1','2','4','8'])
 a.set_yticks(yy); a.set_yticklabels([r[0] for r in rows]); a.grid(axis='y',visible=False)
-a.set_title('C  Ratio change after the revision (95% CI)',loc='left',fontsize=15); a.set_xlabel('Ratio change (log scale)')
+a.set_title('B  Change in the ratio after the revision (95% CI)',loc='left',fontsize=16); a.set_xlabel('Ratio change (log scale)')
 save(fig,'AJIM_Figure3'); plt.close()
-print('figs done', np.exp(obs), [ (r[0][:30], np.round(r[1],2)) for r in rows])
+print('figs done', [ (r[0][:25], np.round(r[1],2)) for r in rows])
 
 # ---------- 投稿用TIFF：RGB（アルファなし）・600 dpi に変換 ----------
 from PIL import Image
