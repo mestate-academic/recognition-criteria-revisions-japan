@@ -1,6 +1,6 @@
 # Revisions of recognition criteria for overwork-related disease and workers' compensation in Japan, 2009–2025
 
-Data and code for the manuscript "Revising recognition criteria for overwork-related disease changed who was compensated, not how many: an interrupted time series and within-category analysis of national workers' compensation data in Japan, 2009–2025" by Hironori Uematsu (Uematsu Occupational Physician's Office / Mestate LLC, Kyoto, Japan). Correspondence: office@mestate.jp.
+Data and code for the manuscript "Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses" by Hironori Uematsu (Uematsu Occupational Physician's Office / Mestate LLC, Kyoto, Japan). Correspondence: office@mestate.jp.
 
 Repository: https://github.com/mestate-academic/recognition-criteria-revisions-japan
 
@@ -12,7 +12,7 @@ Journal: submitted to the *American Journal of Industrial Medicine*.
 |---|---|
 | `data/` | Transcribed public statistics (CSV, UTF-8). See `data/DATA_DICTIONARY.md` for every file, column and source. This dictionary is also Supplementary Table S4 of the paper. |
 | `code/` | Python scripts that build the datasets, run the analyses and draw the figures. |
-| `output/` | Results as text files (`results_*.txt`), intermediate CSVs and Figures 1–3 (PNG). These are produced by the code. |
+| `output/` | Results as text files (`results_*.txt`), intermediate CSVs and Figures 1–3 (PNG for viewing; TIFF at 600 dpi for submission). These are produced by the code. |
 | `manuscript/` | Manuscript text (Markdown). |
 
 All data are aggregate statistics published by the Japanese government; no individual-level data are included.
@@ -33,17 +33,19 @@ bash run_all.sh
 | 1 Build data | `code/build_data.py` | The analysis CSVs in `data/`. The committed CSVs are identical to the script's output. The script contains every transcribed value, with the source document, table number and cross-checks (sums against totals, overlapping editions) written next to the numbers. |
 | 2 First pass | `code/analyze1.py` | `output/results_v1.txt`: decomposition, first-pass interrupted time series, overtime-category tables, the share of approvals below the thresholds by evaluation period (FY2017–2025). Also `output/A_decomposition.csv`, `C_cvd_bands.csv`, `D_mental_bands.csv`. |
 | 3 Robustness | `code/analyze2.py` | `output/results_v2.txt`: interrupted time series sensitivity analyses (window, transition-year coding, slope change, Newey–West, placebo years) and the industry analysis of the 2023 revision (wild cluster score bootstrap with Webb weights, seed 20261109; permutation of industry labels). |
-| 4 Main estimates | `code/analyze4_unified.py` | `output/results_v3_unified.txt`: all main estimates for the common window FY2009–2025. This covers Table 1, Table 2 (including the permutation test, in-time placebo and specificity contrasts) and the ratio models in Table 3. |
-| 5 Figures | `code/make_figures_en.py` | `output/AJIM_Figure1.png` to `AJIM_Figure3.png` |
+| 4 Main estimates | `code/analyze4_unified.py` | `output/results_v3_unified.txt`: all main estimates for the common window FY2009–2025. This covers Table I, Table II (including the ranking of the actual timing, in-time placebo windows and the 80–100 h contrast) and the ratio models in Table IV. |
+| 5 Revision 1 | `code/analyze6_revision1.py` | `output/results_v4_revision1.txt`: CCVD approvals by evaluation period (Table III), contrasts within evaluation periods, and alternative inference for the main contrast (year-clustered and Newey–West standard errors). Added after pre-submission review (post hoc). |
+| 6 Figures | `code/make_figures_en.py` | `output/AJIM_Figure1`–`AJIM_Figure3` (`.png` and `.tif`) |
 
 ### Where each number in the paper comes from
 
 | Paper | Source |
 |---|---|
-| Table 1, decomposition and level changes | `results_v3_unified.txt` sections A and B (CCVD and the three mental disorder steps); mental disorder period means in `output/A_decomposition.csv` |
-| Table 2 | `results_v3_unified.txt` section C |
-| Table 3 | `data/mental_overtime_bands.csv`, `data/mental_processing_time.csv`; ratio changes in `results_v3_unified.txt` section D |
-| Share below either threshold, FY2017–2025 | `results_v1.txt` section C |
+| Table I, decomposition and level changes | `results_v3_unified.txt` sections A and B (CCVD and the three mental disorder steps); mental disorder period means in `output/A_decomposition.csv` |
+| Table II | `results_v3_unified.txt` section C; alternative inference in `results_v4_revision1.txt` section 3 |
+| Table III and Figure 3B–C (evaluation periods) | `results_v4_revision1.txt` sections 1–2 |
+| Table IV | `data/mental_overtime_bands.csv`, `data/mental_processing_time.csv`; ratio changes in `results_v3_unified.txt` section D |
+| Share below either threshold, FY2017–2025 | `results_v1.txt` section C; `results_v4_revision1.txt` section 1 |
 | Table S2 (sensitivity of interrupted time series) | `results_v3_unified.txt` section B (CCVD main and no-trend models); `results_v2.txt` sections I and I2 (other windows and the mental disorder sensitivity analyses) |
 | Table S3 (industries) | `results_v2.txt` section J |
 
@@ -57,8 +59,8 @@ bash run_all.sh
 - **Interrupted time series:** quasi-Poisson models for annual claims, decisions and approvals, and a quasi-binomial model for the approval rate (approvals divided by decisions, weighted by decisions). Each model has a linear trend and a post-revision step. Transition years (FY2021 for CCVD, FY2023 for mental disorders) are excluded.
 - **Within-category analysis (CCVD):** quasi-Poisson model of approvals by overtime category with year fixed effects, using an interaction between the targeted category and the post-revision period.
   - Main contrast: <80 versus ≥80 overtime hours per month, FY2022–2025 versus FY2009–2020.
-  - Robustness: exact permutation test over all 1,820 assignments of 4 post-revision years among 16 non-transition years, and in-time placebo windows.
-  - Specificity contrast: 80–100 versus ≥100 hours.
+  - Robustness: group-specific trends; year-clustered and Newey–West standard errors; in-time placebo windows; ranking of the actual timing among all 1,820 assignments of 4 post-revision years (descriptive, because fiscal years are not exchangeable).
+  - Evaluation periods (FY2017–2025): approvals below the threshold of their own evaluation period (1 month <100 h; 2–6 months <80 h), and contrasts within each period, including 80–100 versus ≥100 hours in the 2–6-month period.
 - **Mental disorders:** composition of approvals by overtime category, including approvals made without examining working hours (FY2017–2025), and mean processing time.
 
 Fiscal years (FY) run from April to March; FY2025 = April 2025–March 2026. Claims are counted by fiscal year of filing, and decisions and approvals by fiscal year of decision.
