@@ -391,4 +391,4 @@ Japan's 2021 revision of the recognition criteria for overwork-related CCVD subs
 *Notes:* FY2016–2022 vs FY2024–2025 (FY2023 excluded). Customer-facing industries: wholesale and retail; accommodation and food services; medical, health care and welfare; education. Comparison industries: manufacturing; information and communications; finance and insurance. Offset: employed persons (Labour Force Survey).
 
 ### Table S4. Data sources by series and fiscal year
-(Source document, table number and URL for each series; to be completed from the transcription script.)
+Provided as a separate Supporting Information file (the data dictionary of the public repository): source document, table number and fiscal years for every series.
