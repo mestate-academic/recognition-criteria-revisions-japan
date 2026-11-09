@@ -87,7 +87,7 @@ Sensitivity analyses varied the analytic window and omitted the trend. For the 2
   - Exclusion of single years (FY2013, an outlier; FY2020, the first pandemic year; FY2022, the first post-revision year).
   - Restriction of the pre-revision period to FY2015–2020.
   - Redefinition of the target as <100 hours.
-- **Specificity check:** we contrasted two categories the revision did not target, 80–100 versus ≥100 hours. Before the revision, 95%–97% of approvals in the 80–100-hour band met the 2–6-month criterion.
+- **Specificity check:** we contrasted two categories the revision did not target, 80–100 versus ≥100 hours. Before the revision, 95%–97% of approvals in the 80–100-hour band met the 2–6-month criterion (69%–90% afterwards). Any inflow of targeted 1-month cases into this band would bias the contrast towards showing a change.
 - **Elements targeted by the other parts of the revision:**
   - short-term overload and extraordinary events versus ≥80 hours;
   - ischaemic heart disease and other cardiac conditions versus cerebrovascular disease (severe heart failure was added).
