@@ -221,7 +221,7 @@ Publishing the number of rejected claims by recorded overtime would allow approv
 
 ### 4.5 | Strengths and limitations
 
-The strengths of this study are its use of complete national statistics over 17 years and its separation of claiming, throughput and adjudication. It also combines interrupted time series with within-category comparisons that are robust to alternative inference, and it examines each evaluation period separately. All data and code will be made publicly available.
+The strengths of this study are its use of complete national statistics over 17 years and its separation of claiming, throughput and adjudication. It also combines interrupted time series with within-category comparisons that are robust to alternative inference, and it examines each evaluation period separately. All data and code are publicly available.
 
 It has several limitations.
 - **Aggregate data:** we used published aggregate data and could not follow individual claims. Counts are by year of decision, so the approval rate is not a cohort measure, and some decisions in each year concern claims filed earlier.
@@ -241,7 +241,7 @@ After Japan's 2021 revision of the recognition criteria for overwork-related CCV
 
 ## DATA AVAILABILITY STATEMENT
 
-All data analysed are publicly available government statistics. The transcribed aggregate data, analysis code and outputs are available to the editors and reviewers on request (an anonymised copy is provided as Supporting Information) and will be deposited in a public repository no later than publication; the repository is identified on the Title Page.
+All data analysed are publicly available government statistics. The transcribed aggregate data, analysis code and outputs are publicly available in an online repository; the link is withheld for anonymised review and is given on the Title Page. An anonymised copy is provided as Supporting Information.
 
 ---
 
