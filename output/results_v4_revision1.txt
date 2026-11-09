@@ -15,7 +15,7 @@ fy
    share of combined 80-100 h band from the 1-month table (%): {2017: 5, 2018: 3, 2019: 4, 2020: 5, 2021: 11, 2022: 31, 2023: 10, 2024: 21, 2025: 14}
 
 == 2. Ratio changes within evaluation periods, FY2022-2025 vs FY2017-2020 (quasi-Poisson, year fixed effects)
-   exact target (1-month <100 h or 2-6-month <80 h) vs rest: 4.26 (2.84-6.37)
+   below either threshold (1-month <100 h or 2-6-month <80 h) vs above: 4.26 (2.84-6.37)
    1-month <100 h vs 1-month >=100 h: 7.87 (3.32-18.65)
    2-6-month <80 h vs 2-6-month >=80 h: 3.39 (1.98-5.81)
    2-6-month <80 h vs 2-6-month >=100 h: 2.27 (1.32-3.89)

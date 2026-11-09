@@ -4,7 +4,7 @@
 1. Evaluation-period-specific composition of CCVD approvals (FY2017-2025), using the
    separate 1-month and 2-6-month tables: annual counts and pre/post means.
 2. Within-category contrasts defined within evaluation periods:
-   - target defined exactly (1-month <100 h or 2-6-month <80 h) vs the rest
+   - below either threshold (1-month <100 h or 2-6-month <80 h; categories operationally defined by the hour thresholds) vs the rest
    - 1-month <100 h vs 1-month >=100 h
    - 2-6-month <80 h vs 2-6-month >=80 h
    - 2-6-month 80-100 h vs 2-6-month >=100 h (former 'specificity' contrast within one period)
@@ -53,7 +53,7 @@ def rr(data, tg, rf):
     x = x[(x.tg == 1) | (x.rf == 1)].groupby(['fy', 'tg', 'post']).n.sum().reset_index()
     return fmt(smf.glm('n ~ C(fy)+tg+tg:post', data=x, family=sm.families.Poisson()).fit(scale='X2'), 'tg:post')
 P('\n== 2. Ratio changes within evaluation periods, FY2022-2025 vs FY2017-2020 (quasi-Poisson, year fixed effects)')
-P('   exact target (1-month <100 h or 2-6-month <80 h) vs rest:',
+P('   below either threshold (1-month <100 h or 2-6-month <80 h) vs above:',
   rr(d, lambda r: (r.period == 'm1' and r.band in LO + ['80_100']) or (r.period == 'm26' and r.band in LO),
         lambda r: (r.period == 'm1' and r.band in HI) or (r.period == 'm26' and r.band in HI + ['80_100'])))
 P('   1-month <100 h vs 1-month >=100 h:', rr(d, lambda r: r.period == 'm1' and r.band in LO + ['80_100'], lambda r: r.period == 'm1' and r.band in HI))
