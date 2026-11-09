@@ -132,3 +132,11 @@ a.set_yticks(yy); a.set_yticklabels([r[0] for r in rows]); a.grid(axis='y',visib
 a.set_title('C  Ratio change after the revision (95% CI)',loc='left',fontsize=15); a.set_xlabel('Ratio change (log scale)')
 save(fig,'AJIM_Figure3'); plt.close()
 print('figs done', np.exp(obs), [ (r[0][:30], np.round(r[1],2)) for r in rows])
+
+# ---------- 投稿用TIFF：RGB（アルファなし）・600 dpi に変換 ----------
+from PIL import Image
+for i in (1, 2, 3):
+    f = O + f'AJIM_Figure{i}.tif'
+    im = Image.open(f); bg = Image.new('RGB', im.size, (255, 255, 255)); bg.paste(im.convert('RGBA'), mask=im.convert('RGBA').split()[3])
+    bg.save(f, dpi=(600, 600), compression='tiff_lzw')
+print('tiff converted to RGB 600 dpi')

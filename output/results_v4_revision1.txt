@@ -28,3 +28,10 @@ fy
    plus group-specific trends, standard errors clustered by year: 3.81 (1.73-8.37)
    annual log ratio, OLS with linear trend, Newey-West (lag 1): 3.88 (2.33-6.48)
    annual log ratio, OLS with linear trend, Newey-West (lag 2): 3.88 (2.45-6.14)
+
+== 4. Below either threshold vs above, FY2022-2025 vs FY2017-2020: alternative trend and inference assumptions (8 years)
+   quasi-Poisson, year fixed effects: 4.26 (2.84-6.37)
+   standard errors clustered by year: 4.26 (2.40-7.55)
+   group-specific linear trends (quasi-Poisson): 3.60 (1.25-10.35)
+   group-specific trends, standard errors clustered by year: 3.60 (0.50-25.87)
+   annual log ratio, OLS with linear trend, Newey-West (lag 1): 2.88 (1.31-6.32)

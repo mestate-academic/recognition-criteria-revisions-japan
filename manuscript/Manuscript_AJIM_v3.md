@@ -1,8 +1,4 @@
-# Manuscript for American Journal of Industrial Medicine — v2 (anonymised main document)
-
-> Article type: Research Article. Main document anonymised for peer review; author information is in the separate Title Page. Tables (Tables I–IV) are uploaded as separate editable Word files; figures as separate TIFF files (600 dpi).
->
-> v2 incorporates the first round of pre-submission review. Changes are listed in `査読対応_AJIM_第1回_ChatGPT_Gemini.md`.
+# Manuscript for American Journal of Industrial Medicine — v3 (anonymised main document)
 
 ---
 
@@ -14,13 +10,13 @@ Changes in the composition of workers' compensation approvals after revisions of
 
 ---
 
-## Abstract (244 words, including headings)
+## Abstract (245 words, including headings)
 
-**Background:** Recognition criteria determine which workers are compensated for overwork-related disease, yet revisions are rarely evaluated. In 2021, Japan revised its cerebro-cardiovascular disease (CCVD) criteria to allow recognition when overtime approached, but did not reach, the "karoshi line" and other workload factors were present. Mental disorder criteria were revised in 2011, 2020 and 2023.
+**Background:** Recognition criteria determine which workers are compensated for overwork-related disease, yet revisions are rarely evaluated. In 2021, Japan revised its cerebro-cardiovascular disease (CCVD) criteria to allow recognition when overtime approached the "karoshi line" and other workload factors were present. Mental disorder criteria were revised in 2011, 2020 and 2023.
 
 **Methods:** Using national statistics (fiscal years [FY] 2009–2025), we fitted interrupted time series models to claims, approvals and approval rates. For CCVD, we compared approvals with <80 versus ≥80 overtime hours per month using year-fixed-effects Poisson models, overall and by evaluation period. For mental disorders, we examined the composition of approvals.
 
-**Results:** No significant level change in CCVD approvals was detected after 2021 (rate ratio [RR] 1.11, 95% CI 0.93–1.33). Approvals with <80 hours rose from 18.6 to 48.5 per year; their ratio to ≥80-hour approvals increased 4.27-fold (3.28–5.57). Within the 2–6-month evaluation period, approvals with 80–100 hours fell as those below 80 hours rose, with a stable period total. For mental disorders, approval rates rose after 2011 (odds ratio 1.63, 1.34–1.99) and approvals after 2023 (RR 1.54, 1.37–1.74). From FY2017–2019 to FY2024–2025, approvals made without examining hours rose from 139 to 657 per year, and mean processing time lengthened from 216 to 277 days.
+**Results:** No significant level change in CCVD approvals was detected after 2021 (rate ratio [RR] 1.11, 95% CI 0.93–1.33), but the ratio of approvals with <80 to ≥80 overtime hours per month increased 4.27-fold (3.28–5.57). In the 2–6-month evaluation period, annual approvals with 80–100 hours fell from 82 to 48 and those with <80 hours rose from 17 to 43; the period total remained similar. For mental disorders, approval rates rose after 2011 (odds ratio 1.63, 1.34–1.99) and approvals after 2023 (RR 1.54, 1.37–1.74). Approvals made without examining hours rose from 139 (FY2017–2019) to 657 per year (FY2024–2025); mean processing time rose from 216 (FY2017) to 277 days (FY2024).
 
 **Conclusions:** After Japan's 2021 revision, compensated CCVD cases shifted below the karoshi line without a detectable change in total approvals. Aggregate data cannot distinguish newly eligible workers from lower recorded hours among previously eligible workers.
 
@@ -90,7 +86,7 @@ Sensitivity analyses varied the analytic window and omitted the trend. For the 2
   - Exclusion of single years (FY2013, an outlier; FY2020, the first pandemic year; FY2022, the first post-revision year), restriction of the pre-revision period to FY2015–2020, and redefinition of the target as <100 hours.
   - In-time placebo tests: pseudo-revisions defining 4-year windows wholly within the pre-revision period.
   - Ranking of the actual timing: we compared the observed change in the mean log ratio with all 1,820 ways of choosing 4 "post-revision" years from the 16 non-transition years. Because fiscal years are not exchangeable under a null hypothesis (overtime caps, the pandemic and claiming trends differ between years), we interpret this as a descriptive ranking, not as an exact test of a causal effect.
-- **Evaluation-period analysis (FY2017–2025):** because the threshold is 100 hours for the 1-month period but 80 hours for the 2–6-month period, the combined <80-hour category does not coincide exactly with the cases the revision addressed, and the combined 80–100-hour category includes 1-month cases below the 1-month threshold. Using the period-specific tables, we therefore compared approvals below either threshold (<100 hours in the 1-month table or <80 hours in the 2–6-month table) with approvals above it, and examined each period separately, including 80–100 versus ≥100 hours within the 2–6-month period. The pre-revision period for these analyses was FY2017–2020.
+- **Evaluation-period analysis (FY2017–2025):** because the threshold is 100 hours for the 1-month period but 80 hours for the 2–6-month period, the combined <80-hour category does not coincide exactly with the cases the revision addressed, and the combined 80–100-hour category includes 1-month cases below the 1-month threshold. Using the period-specific tables, we therefore compared approvals below either threshold (<100 hours in the 1-month table or <80 hours in the 2–6-month table) with approvals above it, and examined each period separately, including 80–100 versus ≥100 hours within the 2–6-month period. We refer to these as categories operationally defined by the hour thresholds, because the revision addressed near-threshold hours combined with other workload factors, not every case below a threshold. The pre-revision period for these analyses was FY2017–2020. Because only 4 years are available on each side, we also report the main evaluation-period contrast with year-clustered standard errors, group-specific trends and Newey–West standard errors (Supplementary Table S5).
 - **Elements addressed by the other parts of the revision:**
   - short-term overload and extraordinary events versus ≥80 hours;
   - ischaemic heart disease and other cardiac conditions versus cerebrovascular disease (severe heart failure was added).
@@ -101,7 +97,7 @@ The evaluation-period analyses and the alternative inference were added after in
 
 **Supplementary analysis (exploratory).** The 2023 revision added customer harassment. We therefore compared approvals and claims in four customer-facing industries (wholesale and retail; accommodation and food services; medical, health care and welfare; education) with three other industries (manufacturing; information and communications; finance and insurance). The model was a difference-in-differences Poisson model with employment from the Labour Force Survey as an offset. With only 7 clusters, inference used a wild cluster score bootstrap with Webb weights³⁰,³¹ and permutation of industry labels (35 assignments).
 
-Analyses used Python 3 (pandas, statsmodels). Reporting follows the STROBE and RECORD statements;³²,³³ the checklist is provided as Supporting Information. Data and code are publicly available (see Data Availability Statement).
+Analyses used Python 3 (pandas, statsmodels). Reporting follows the STROBE and RECORD statements;³²,³³ the checklist is provided as Supporting Information. The availability of data and code is described in the Data Availability Statement.
 
 ### 2.5 | Ethics
 
@@ -145,12 +141,12 @@ The composition of approvals changed markedly (Figure 1; Table II).
 
 Table III and Figure 3B show approvals separately for the two evaluation periods in FY2017–2025.
 
-- **Below either threshold:** approvals below the threshold of their evaluation period were 7.1%–12.0% of approvals in FY2017–2020, 20.9% in FY2021 and 22.7%–33.5% in FY2022–2025. Relative to approvals above the thresholds, they increased 4.26-fold (2.84–6.37).
+- **Below either threshold:** approvals below the threshold of their evaluation period were 7.1%–12.0% of approvals in FY2017–2020, 20.9% in FY2021 and 22.7%–33.5% in FY2022–2025. Relative to approvals above the thresholds, they increased 4.26-fold (2.84–6.37; 2.40–7.55 with year-clustered standard errors). The estimate was less precise when group-specific trends were allowed (3.60, 1.25–10.35), and its confidence interval included 1 when standard errors were also clustered by year (0.50–25.87); ordinary least squares with Newey–West standard errors gave 2.88 (1.31–6.32; Supplementary Table S5).
 - **1-month period:** approvals with ≥100 hours fell from 75.8 to 44.3 per year, and those with <100 hours rose from 3.8 to 17.3 (ratio change 7.87, 3.32–18.65).
-- **2–6-month period:** approvals with 80–100 hours fell from 82.3 to 48.3 per year, those with <80 hours rose from 17.0 to 42.5, and those with ≥100 hours changed little (33.8 to 37.3). The period total was stable (133.0 and 128.0). Approvals with <80 hours increased relative to those with ≥100 hours (2.27, 1.32–3.89), whereas approvals with 80–100 hours decreased relative to those with ≥100 hours (0.53, 0.40–0.71).
+- **2–6-month period:** approvals with 80–100 hours fell from 82.3 to 48.3 per year, those with <80 hours rose from 17.0 to 42.5, and those with ≥100 hours changed little (33.8 to 37.3). The period total remained similar (133.0 and 128.0). Approvals with <80 hours increased relative to those with ≥100 hours (2.27, 1.32–3.89), whereas approvals with 80–100 hours decreased relative to those with ≥100 hours (0.53, 0.40–0.71).
 - **Combined table:** the contrast of 80–100 versus ≥100 hours did not change (0.96, 0.81–1.13), because 1-month cases below the 1-month threshold entered the 80–100-hour band after the revision (3%–5% of the band in FY2017–2020; 10%–31% in FY2022–2025) and offset the decline in 2–6-month cases. This contrast therefore cannot serve as a negative control.
 
-Thus, within each evaluation period, approvals just above the threshold declined while approvals below it increased, and the number of approvals based on long-term overload did not increase.
+Thus, approvals above the threshold declined in the 1-month period, and approvals in the adjacent 80–100-hour category declined in the 2–6-month period, while approvals below the thresholds increased; the number of approvals based on long-term overload did not increase. With only 4 years before and after the revision, the evaluation-period analysis is descriptive evidence that is consistent with the main contrast but cannot confirm it independently.
 
 ### 3.5 | Mental disorders: totals
 
@@ -184,7 +180,7 @@ In the exploratory industry analysis, the estimates for customer-facing relative
 
 ### 4.1 | Principal findings
 
-After Japan's 2021 revision of the criteria for overwork-related CCVD, no change in the level of total approvals was detected. The composition of approvals, however, shifted towards overtime below the karoshi line. Approvals with <80 hours per month rose 2.6-fold, and their ratio to long-hours approvals rose about 4-fold. This shift was robust to group-specific trends, alternative inference, exclusion of single years and an exact definition of the cases below the threshold of each evaluation period, and no comparable shift occurred at placebo dates. Short-term overload and extraordinary events, which the revision also clarified, increased as well. Within each evaluation period, however, the rise in approvals below the threshold was accompanied by a fall in approvals just above it, and the number of approvals based on long-term overload did not increase. The shift is therefore better described as a change in the recorded overtime of compensated cases than as an addition of cases.
+After Japan's 2021 revision of the criteria for overwork-related CCVD, no change in the level of total approvals was detected. The composition of approvals, however, shifted towards overtime below the karoshi line. Approvals with <80 hours per month rose 2.6-fold, and their ratio to long-hours approvals rose about 4-fold. In the 16-year series, this shift was robust to group-specific trends, alternative inference and exclusion of single years, and no comparable shift occurred at placebo dates. It was also seen when categories were defined by the threshold of each evaluation period, although that comparison rests on 4 years before and after the revision and was imprecise when category-specific trends were allowed. Short-term overload and extraordinary events, which the revision also clarified, increased as well. However, the rise in approvals below the thresholds was accompanied by a fall in approvals above the threshold in the 1-month period and in the adjacent 80–100-hour category in the 2–6-month period, and the number of approvals based on long-term overload did not increase. The shift is therefore better described as a change in the recorded overtime of compensated cases than as an addition of cases.
 
 For mental disorders, the three revisions were associated with different components. The 2011 criteria were followed by a higher approval rate. The 2020 and 2023 revisions coincided with rising approvals, concentrated almost entirely in cases decided without examining working hours, and with rising claims and longer processing times. Because these changes coincided with other developments, we cannot attribute them to the criteria.
 
@@ -199,10 +195,10 @@ Durand-Moreau and colleagues found in this journal that presumptive coverage was
 Three explanations, not mutually exclusive, are consistent with the shift in CCVD approvals.
 
 - **Wider eligibility.** Workers with overtime below the thresholds and other workload factors, who would previously have been rejected, were approved under the revised criteria. This is the intended effect.
-- **Lower hours among workers who would previously have qualified.** Overtime caps introduced in April 2019 for large and April 2020 for small and medium-sized employers limit overtime to less than 100 hours in a month and to an average of 80 hours over 2–6 months, exactly the thresholds of the criteria.²¹ From April 2019, employers were also required to record working hours by objective methods.³⁴ If the hours of workers who develop CCVD were compressed to just below the thresholds, some would have been rejected under the former criteria but approved under the revised ones. The revision would then have maintained, rather than extended, coverage. Because counts are by year of decision and decisions follow onset by about a year, effects of the caps would appear in approvals around FY2020–2022, coinciding with the revision. However, the caps applied to construction and vehicle driving only from April 2024, and the monthly limits still do not apply to drivers,³⁵ while road freight transport accounts for the largest share of CCVD approvals.²²
+- **Lower hours among workers who would previously have qualified.** Overtime caps introduced in April 2019 for large and April 2020 for small and medium-sized employers limit overtime, including statutory holiday work, to less than 100 hours in a single month and to an average of no more than 80 hours over 2–6 months, broadly corresponding to the thresholds of the criteria.²¹ From April 2019, employers were also required to record working hours by objective methods.³⁴ If the hours of workers who develop CCVD were compressed to just below the thresholds, some would have been rejected under the former criteria but approved under the revised ones. The revision would then have maintained, rather than extended, coverage. Because counts are by year of decision and decisions follow onset by about a year, effects of the caps would appear in approvals around FY2020–2022, coinciding with the revision. However, the caps applied to construction and vehicle driving only from April 2024, and drivers are subject to an annual limit of 960 hours rather than the monthly limits,³⁵ while road freight transport accounts for the largest share of CCVD approvals.²²
 - **Changes in how hours were established.** Before the revision, investigators had an incentive to establish hours at or above a threshold to approve a case; afterwards, near-threshold cases could be approved on other grounds. Such a change would move cases from just above to just below a threshold without changing who was compensated.
 
-Several observations bear on these explanations. The absolute number of approvals below 80 hours more than doubled, which a declining reference category cannot produce mechanically; allowing group-specific trends changed the estimate little (3.81); and in FY2009–2020 the share below 80 hours fluctuated between 4.8% and 10.6% without a sustained trend. Within each evaluation period, however, the decline was concentrated just above the threshold (80–100 hours in the 2–6-month period), approvals with ≥100 hours in that period were stable, and the period total did not change. This pattern fits the second and third explanations at least as well as the first. Other influences, such as the COVID-19 pandemic, which reduced working hours and coincided with low numbers of decisions in FY2021–2022, and changes in the underlying incidence of CCVD, would be expected to affect all hour categories rather than only the categories adjacent to the thresholds. Distinguishing the explanations requires approval rates by hour category, which would need the number of rejected claims by recorded overtime, or individual-level data.
+Several observations bear on these explanations. The absolute number of approvals below 80 hours more than doubled, which a declining reference category cannot produce mechanically; allowing group-specific trends changed the estimate little (3.81); and in FY2009–2020 the share below 80 hours fluctuated between 4.8% and 10.6% without a sustained trend. In the 2–6-month period, however, the decline was concentrated in the adjacent 80–100-hour category, approvals with ≥100 hours were stable, and the period total remained similar. This pattern fits the second and third explanations at least as well as the first. Other contemporaneous changes, including the COVID-19 pandemic, which coincided with low numbers of decisions in FY2021–2022, may also have affected overtime categories differentially through changes in occupational composition, working patterns and the underlying incidence of disease. The aggregate data cannot establish which mechanism contributed most to the observed redistribution. Distinguishing the explanations requires approval rates by hour category, which would need the number of rejected claims by recorded overtime, or individual-level data.
 
 The increase was not entirely abrupt. The below-threshold share was already 10.6% in FY2019 and reached 16.9% in the transition year FY2021. This may reflect the expert committee's deliberations from 2020, decisions on pending claims under the new criteria during FY2021, the overtime caps, or chance. Because counts are by year of decision, some approvals in FY2022 concern claims filed before the revision.
 
@@ -212,7 +208,9 @@ The lengthening of processing time while the event-alone pathway expanded may se
 
 ### 4.4 | Implications
 
-Japan's 2021 revision illustrates a general problem of bright-line thresholds: workers just below an hour cut-off can be excluded despite other hazards, such as short rest intervals. The revision replaced a strict cut-off with a combined assessment of near-threshold hours and qualitative workload factors. Jurisdictions that compensate multifactorial disease through occupation-specific presumptions, as in North America and Australia, or through hour thresholds, as in Korea and Taiwan, may face similar design choices.
+Japan's 2021 revision addresses a general issue with hour benchmarks: workers just below them may face other hazards, such as short rest intervals. The revision retained the established overtime benchmarks while explicitly clarifying that near-threshold overtime, together with other workload factors, could support recognition of work-relatedness. Jurisdictions that compensate multifactorial disease through occupation-specific presumptions, as in North America and Australia, or through hour thresholds, as in Korea and Taiwan, may face similar design choices.
+
+Although aggregate statistics cannot isolate whether the shift reflects newly eligible workers, changes in recorded hours or changes in adjudication, the findings carry a general lesson. A clarification of recognition criteria that left the hour benchmarks unchanged coincided with a substantial movement of compensated cases across those benchmarks, while total approvals did not change detectably. Without category-specific indicators, such a change would have gone unnoticed.
 
 For policymakers, our findings suggest that a criteria revision should be evaluated by its effect on the categories it addresses, and that these categories should be examined together with adjacent categories, not only total approvals or approval rates. These indicators should be monitored routinely:
 - the distribution of approvals by overtime within each evaluation period;
@@ -223,27 +221,27 @@ Publishing the number of rejected claims by recorded overtime would allow approv
 
 ### 4.5 | Strengths and limitations
 
-The strengths of this study are its use of complete national statistics over 17 years and its separation of claiming, throughput and adjudication. It also combines interrupted time series with within-category comparisons that are robust to alternative inference, and it examines each evaluation period separately. All data and code are public.
+The strengths of this study are its use of complete national statistics over 17 years and its separation of claiming, throughput and adjudication. It also combines interrupted time series with within-category comparisons that are robust to alternative inference, and it examines each evaluation period separately. All data and code will be made publicly available.
 
 It has several limitations.
 - **Aggregate data:** we used published aggregate data and could not follow individual claims. Counts are by year of decision, so the approval rate is not a cohort measure, and some decisions in each year concern claims filed earlier.
 - **Approved cases only by category:** hours are tabulated only for approved cases. Without rejected claims by recorded overtime, we cannot estimate approval rates by category, which limits the separation of wider eligibility from changes in recorded hours.
 - **Recorded overtime:** the overtime categories record hours established in the investigation, which may be underestimated and may themselves be affected by a revision.
 - **Concurrent events:** overtime caps, the mandate to record working hours, the COVID-19 pandemic and harassment-prevention legislation coincided with the revisions and may have affected categories differentially. We therefore report associations, not causal effects.
-- **Analytic choices:** the evaluation-period analyses and alternative inference were added after internal review, and the analyses were not pre-registered. Fiscal years are not exchangeable, so the ranking of the actual timing is descriptive.
+- **Analytic choices:** the evaluation-period analyses and alternative inference were added after internal review, and the analyses were not pre-registered. The evaluation-period analyses rest on 4 years before and after the revision and were imprecise when category-specific trends were allowed. Fiscal years are not exchangeable, so the ranking of the actual timing is descriptive.
 - **Changes in data sources and short series:** the combined CCVD category tables came from different sources before and after FY2020, although sums matched in the overlapping years. Period-specific tables and mental disorder category tables begin only in FY2017, and follow-up after the 2021 and 2023 revisions was 4 and 2 years.
 - **Few clusters:** the industry analysis rests on 7 industries, and its results depended on the inference method.
 - **Compensated cases, not disease:** we studied compensated cases, not the incidence of disease.
 
 ### 4.6 | Conclusions
 
-After Japan's 2021 revision of the recognition criteria for overwork-related CCVD, compensated cases shifted towards overtime below the karoshi line, while no change in total approvals was detected. Within each evaluation period, approvals just above the thresholds declined as those below them rose, so aggregate statistics cannot show whether the revision extended compensation to newly eligible workers or maintained it for workers whose recorded hours fell. Recent revisions of the mental disorder criteria coincided with growth in approvals based on workplace events rather than hours, and with longer processing times. Evaluations of recognition criteria should examine the categories that the criteria address together with adjacent categories, and compensation statistics should report rejected claims by the same categories.
+After Japan's 2021 revision of the recognition criteria for overwork-related CCVD, compensated cases shifted towards overtime below the karoshi line, while no change in total approvals was detected. Approvals above the thresholds, particularly in the adjacent 80–100-hour category of the 2–6-month period, declined as those below them rose, so aggregate statistics cannot show whether the revision extended compensation to newly eligible workers or maintained it for workers whose recorded hours fell. Recent revisions of the mental disorder criteria coincided with growth in approvals based on workplace events rather than hours, and with longer processing times. Evaluations of recognition criteria should examine the categories that the criteria address together with adjacent categories, and compensation statistics should report rejected claims by the same categories.
 
 ---
 
 ## DATA AVAILABILITY STATEMENT
 
-All data analysed are publicly available government statistics. The transcribed data, analysis code and outputs are available in a public repository; the link is withheld for anonymised review and is given on the Title Page.
+All data analysed are publicly available government statistics. The transcribed aggregate data, analysis code and outputs are available to the editors and reviewers on request (an anonymised copy is provided as Supporting Information) and will be deposited in a public repository no later than publication; the repository is identified on the Title Page.
 
 ---
 
@@ -283,7 +281,7 @@ All data analysed are publicly available government statistics. The transcribed 
 32. von Elm E, Altman DG, Egger M, et al. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies. *Lancet.* 2007;370(9596):1453-1457.
 33. Benchimol EI, Smeeth L, Guttmann A, et al. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. *PLoS Med.* 2015;12(10):e1001885.
 34. Industrial Safety and Health Act (Act No. 57 of 1972), Article 66-8-3, as amended by Act No. 71 of 2018, in force 1 April 2019 [in Japanese].
-35. Ministry of Health, Labour and Welfare. Overtime caps for construction work, vehicle driving and physicians applied from April 2024 [in Japanese]. Tokyo: MHLW; 2023.
+35. Ministry of Health, Labour and Welfare. Hatarakikata Susume: work-style reform for construction, drivers and physicians [website, in Japanese]. https://hatarakikatasusume.mhlw.go.jp/ (accessed 9 November 2026).
 
 ---
 
@@ -369,7 +367,7 @@ All data analysed are publicly available government statistics. The transcribed 
 
 *Notes:*
 - The thresholds are about 100 hours for the month before onset and an average of about 80 hours per month over 2–6 months. "Below either threshold" is 1 month <100 h plus 2–6 months <80 h, as a percentage of all approvals.
-- Period-specific tables are published from FY2017. These analyses were added after internal review (post hoc).
+- Period-specific tables are published from FY2017. These analyses were added after internal review (post hoc). Sensitivity to category-specific trends and alternative inference is shown in Supplementary Table S5.
 
 ### Table IV. Approvals for mental disorders by monthly overtime category and processing time
 
@@ -452,6 +450,18 @@ All data analysed are publicly available government statistics. The transcribed 
 | Claims | 1.24 | 0.98–1.57 | 0.033 (1.04–1.56) | 0.086 |
 
 *Notes:* FY2016–2022 vs FY2024–2025 (FY2023 excluded). Customer-facing industries: wholesale and retail; accommodation and food services; medical, health care and welfare; education. Comparison industries: manufacturing; information and communications; finance and insurance. Offset: employed persons (Labour Force Survey). With 7 clusters, the two inference methods disagree for claims; neither result should be regarded as evidence of an industry difference.
+
+### Table S5. Sensitivity of the evaluation-period contrast (below either threshold vs above), FY2022–2025 vs FY2017–2020
+
+| Model | Ratio change | 95% CI |
+|---|---:|---|
+| Quasi-Poisson, year fixed effects (Table III) | 4.26 | 2.84–6.37 |
+| Standard errors clustered by year | 4.26 | 2.40–7.55 |
+| Group-specific linear trends | 3.60 | 1.25–10.35 |
+| Group-specific trends, standard errors clustered by year | 3.60 | 0.50–25.87 |
+| Annual log ratio, OLS with linear trend, Newey–West (lag 1) | 2.88 | 1.31–6.32 |
+
+*Notes:* 8 fiscal years (FY2021 excluded). With 8 clusters, the clustered intervals rely on a normal approximation and are themselves imprecise. Post hoc analyses.
 
 ### Table S4. Data sources by series and fiscal year
 Provided as a separate Supporting Information file (the data dictionary of the public repository): source document, table number and fiscal years for every series.

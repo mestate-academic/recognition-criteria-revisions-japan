@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use these data or code, please cite the paper and this repository."
 type: dataset
-title: "Data and code for: Revising recognition criteria for overwork-related disease changed who was compensated, not how many: an interrupted time series and within-category analysis of national workers' compensation data in Japan, 2009–2025"
+title: "Data and code for: Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses"
 authors:
   - family-names: Uematsu
     given-names: Hironori
     orcid: "https://orcid.org/0009-0006-9927-7473"
     affiliation: "Uematsu Occupational Physician's Office (Mestate LLC), Kyoto, Japan"
     email: office@mestate.jp
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-11-09"
 license: "MIT AND CC-BY-4.0"
 repository-code: "https://github.com/mestate-academic/recognition-criteria-revisions-japan"

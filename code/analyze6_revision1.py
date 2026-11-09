@@ -12,6 +12,8 @@
 3. Alternative inference for the main contrast (<80 vs >=80 h, FY2009-2025):
    year-clustered standard errors, and OLS of the annual log ratio with a linear trend
    and Newey-West standard errors.
+4. Sensitivity of the evaluation-period contrast to category-specific trends and
+   alternative inference (added after the second pre-submission review; post hoc).
 Output: output/results_v4_revision1.txt
 """
 import pandas as pd, numpy as np, statsmodels.api as sm, statsmodels.formula.api as smf
@@ -35,7 +37,7 @@ def grp(r):
 e = ot[(ot.fy >= 2017) & ot.period.isin(['m1', 'm26', 'm1+m26'])].copy(); e['g'] = e.apply(grp, axis=1)
 T = e.groupby(['fy', 'g']).n.sum().unstack()[['m1_ge100', 'm1_lt100', 'm26_ge100', 'm26_80_100', 'm26_lt80', 'other']]
 T['m1_total'] = T.m1_ge100 + T.m1_lt100; T['m26_total'] = T.m26_ge100 + T.m26_80_100 + T.m26_lt80
-T['below_either_%'] = (100 * (T.m1_lt100 + T.m26_lt80) / T[['m1_ge100', 'm1_lt100', 'm26_ge100', 'm26_80_100', 'm26_lt80', 'other']].sum(1)).round(1)
+T['below_either_%'] = (100 * (T.m1_lt100 + T.m26_lt80) / T[['m1_ge100', 'm1_lt100', 'm26_ge100', 'm26_80_100', 'm26_lt80', 'other']].sum(axis=1)).round(1)
 P('== 1. CCVD approvals by evaluation period and overtime (FY2017-2025)')
 P(T.to_string())
 P('   mean FY2017-2020:', T.loc[2017:2020].drop(columns='below_either_%').mean().round(2).to_dict())
@@ -74,4 +76,17 @@ W = g.pivot_table(index='fy', columns='tg', values='n'); y = np.log(W[1] / W[0])
 X = sm.add_constant(pd.DataFrame({'t': W.index - S, 'post': (W.index >= 2022).astype(int)}, index=W.index))
 for L in [1, 2]:
     P(f'   annual log ratio, OLS with linear trend, Newey-West (lag {L}):', fmt(sm.OLS(y, X).fit(cov_type='HAC', cov_kwds={'maxlags': L}), 'post'))
+
+# ---- 4. sensitivity of the evaluation-period contrast (revision 2; post hoc) ----
+P('\n== 4. Below either threshold vs above, FY2022-2025 vs FY2017-2020: alternative trend and inference assumptions (8 years)')
+dd = d.copy()
+dd['tg'] = dd.apply(lambda r: (r.period == 'm1' and r.band in LO + ['80_100']) or (r.period == 'm26' and r.band in LO), axis=1).astype(int)
+ge = dd.groupby(['fy', 'tg', 'post']).n.sum().reset_index(); ge['t'] = ge.fy - 2017
+P('   quasi-Poisson, year fixed effects:', fmt(smf.glm('n ~ C(fy)+tg+tg:post', data=ge, family=sm.families.Poisson()).fit(scale='X2'), 'tg:post'))
+P('   standard errors clustered by year:', fmt(smf.glm('n ~ C(fy)+tg+tg:post', data=ge, family=sm.families.Poisson()).fit(cov_type='cluster', cov_kwds={'groups': ge.fy}), 'tg:post'))
+P('   group-specific linear trends (quasi-Poisson):', fmt(smf.glm('n ~ C(fy)+tg+tg:t+tg:post', data=ge, family=sm.families.Poisson()).fit(scale='X2'), 'tg:post'))
+P('   group-specific trends, standard errors clustered by year:', fmt(smf.glm('n ~ C(fy)+tg+tg:t+tg:post', data=ge, family=sm.families.Poisson()).fit(cov_type='cluster', cov_kwds={'groups': ge.fy}), 'tg:post'))
+We = ge.pivot_table(index='fy', columns='tg', values='n'); ye = np.log(We[1] / We[0])
+Xe = sm.add_constant(pd.DataFrame({'t': We.index - 2017, 'post': (We.index >= 2022).astype(int)}, index=We.index))
+P('   annual log ratio, OLS with linear trend, Newey-West (lag 1):', fmt(sm.OLS(ye, Xe).fit(cov_type='HAC', cov_kwds={'maxlags': 1}), 'post'))
 open(O + 'results_v4_revision1.txt', 'w').write('\n'.join(out)); print('done')
