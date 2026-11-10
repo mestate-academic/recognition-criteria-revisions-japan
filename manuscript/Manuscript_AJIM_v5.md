@@ -1,20 +1,13 @@
-# Manuscript for American Journal of Industrial Medicine — v4 (anonymised main document)
-
----
-
-## Title
-
-Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses
+# Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses
 
 **Running title:** Recognition criteria revisions and compensated overwork-related disease
 
----
 
-## Abstract (247 words, including headings)
+## Abstract
 
 **Background:** Recognition criteria decide who is compensated for overwork-related disease, but their revisions are rarely evaluated. In 2021, Japan revised its criteria for cerebro-cardiovascular disease (CCVD) so that overtime close to, but below, the "karoshi line" could be recognised when other workload factors were present.
 
-**Methods:** Using national statistics for fiscal years (FY) 2009–2025, we analysed total approvals with interrupted time series and compared approvals with <80 and ≥80 overtime hours per month within the same years (Poisson models with year fixed effects), including each evaluation period separately. We also described approvals for mental disorders, whose criteria were revised in 2011, 2020 and 2023.
+**Methods:** Using national statistics for fiscal years (FY) 2009–2025, we analysed total approvals with interrupted time series and compared approvals with <80 and ≥80 overtime hours per month within the same years (quasi-Poisson models with year fixed effects), including each evaluation period separately. We also described approvals for mental disorders, whose criteria were revised in 2011, 2020 and 2023.
 
 **Results:** After the 2021 revision, total CCVD approvals showed no significant level change (rate ratio 1.11, 95% CI 0.93–1.33), but the ratio of approvals with <80 hours to those with ≥80 hours increased 4.27-fold (3.28–5.57). In the 2–6-month evaluation period, annual approvals with 80–100 hours fell from 82 to 48, while those with <80 hours rose from 17 to 43; the period total changed little. For mental disorders, approvals made without examining working hours rose from 139 to 657 per year (FY2017–2019 to FY2024–2025), and mean processing time from 216 to 277 days (FY2017 to FY2024).
 
@@ -22,7 +15,6 @@ Changes in the composition of workers' compensation approvals after revisions of
 
 **Keywords:** workers' compensation; occupational disease; karoshi; long working hours; mental disorders; harassment; interrupted time series; Japan
 
----
 
 ## 1 | INTRODUCTION
 
@@ -46,29 +38,27 @@ The 2021 CCVD revision (applied from 15 September 2021) had four elements:⁹,¹
 - the criteria for short-term overload and extraordinary events were clarified;
 - severe heart failure was added to the compensable diseases.
 
-The mental disorder revisions are summarised in Supplementary Table S1. Under the mental disorder criteria, when a single workplace event, such as severe harassment or violence, is rated as a strong psychological load on its own, work-relatedness can be established without examining working hours. This is a formal pathway in the criteria, not an omission of investigation.¹⁰,¹²
+The mental disorder revisions are summarised in Table S1 (Supporting Information). Under the mental disorder criteria, when a single workplace event, such as severe harassment or violence, is rated as a strong psychological load on its own, work-relatedness can be established without examining working hours. This is a formal pathway in the criteria, not an omission of investigation.¹⁰,¹²
 
 ### 2.2 | Data
 
 We used the MHLW's annual reports on compensation for overwork-related disorders, published each June for the preceding fiscal year (April to March).²² The reports give national numbers of claims, decisions and approvals for CCVD and mental disorders, and approvals by the overtime established in the investigation.
 
-- **CCVD approvals by overtime:** approvals for long-term overload are reported in bands of average monthly overtime (<45, 45–60, 60–80, 80–100, 100–120, 120–140, 140–160 and ≥160 hours). Overtime is measured over the evaluation period used for the case: the month before onset (threshold about 100 hours) or 2–6 months before onset (threshold about 80 hours per month). A separate category covers short-term overload and extraordinary events. For FY2009–2019 we used tables combining the two periods, published by an expert committee;²³ separate tables for each period are available from FY2017, and we summed them for FY2020 onwards. In FY2017–2019, these sums matched the combined tables.
-- **Mental disorder approvals:** reported in the same overtime bands, plus a category for cases judged work-related "without the need to examine working hours" (FY2017–2025).
-- **Processing time for mental disorders:** mean days from claim to decision, from an expert committee (FY2009–2020)²⁴ and MHLW policy evaluation documents (FY2021–2024).²⁵
+**CCVD approvals by overtime.** Approvals for long-term overload are reported in bands of average monthly overtime (<45, 45–60, 60–80, 80–100, 100–120, 120–140, 140–160 and ≥160 hours). Overtime is measured over the evaluation period used for the case: the month before onset (threshold about 100 hours) or 2–6 months before onset (threshold about 80 hours per month). A separate category covers short-term overload and extraordinary events. For FY2009–2019 we used tables combining the two periods, published by an expert committee;²³ separate tables for each period are available from FY2017, and we summed them for FY2020 onwards. In FY2017–2019, these sums matched the combined tables.
 
-All values were transcribed by hand, with the source recorded for each value, and checked against overlapping editions, annual totals and the text of the reports. No values were missing within the periods analysed, except processing time for FY2025, which had not been published. Claims are counted by fiscal year of filing, and decisions and approvals by fiscal year of decision. Cases involving multiple employers, recognised from September 2020, are reported separately and were not included (2–5 CCVD approvals per year). Supplementary Table S2 lists the source of every series.
+**Mental disorder approvals.** These are reported in the same overtime bands, plus a category for cases judged work-related "without the need to examine working hours" (FY2017–2025).
+
+**Processing time for mental disorders.** We used the mean number of days from claim to decision, from an expert committee (FY2009–2020)²⁴ and MHLW policy evaluation documents (FY2021–2024).²⁵
+
+All values were transcribed by hand, with the source recorded for each value, and checked against overlapping editions, annual totals and the text of the reports. No values were missing within the periods analysed, except processing time for FY2025, which had not been published. Claims are counted by fiscal year of filing, and decisions and approvals by fiscal year of decision. Cases involving multiple employers, recognised from September 2020, are reported separately and were not included (2–5 CCVD approvals per year). Table S2 lists the source of every series.
 
 ### 2.3 | Statistical analysis
 
-**Totals.** We analysed annual claims, decisions and approvals with quasi-Poisson segmented regression, and the approval rate (approvals divided by decisions) with quasi-binomial regression weighted by decisions.²⁶⁻²⁸ Each model had a linear trend and a step for the post-revision period. For CCVD, the post-revision period was FY2022–2025, and FY2021 was excluded as a transition year. For mental disorders, the three revisions were modelled together, with steps from FY2012, FY2020 and FY2024, and FY2023 excluded. Sensitivity analyses changed the analytic window, removed the trend, coded the transition year differently, added a change in slope, and used ordinary least squares with Newey–West standard errors²⁹ (Supplementary Table S3).
+**Totals.** We analysed annual claims, decisions and approvals with quasi-Poisson segmented regression, and the approval rate (approvals divided by decisions) with quasi-binomial regression weighted by decisions.²⁶⁻²⁸ Each model had a linear trend and a step for the post-revision period. For CCVD, the post-revision period was FY2022–2025, and FY2021 was excluded as a transition year. For mental disorders, the three revisions were modelled together, with steps from FY2012, FY2020 and FY2024, and FY2023 excluded. Sensitivity analyses changed the analytic window, removed the trend, coded the transition year differently, added a change in slope, and used ordinary least squares with Newey–West standard errors²⁹ (Table S3).
 
-**Composition of CCVD approvals.** The main analysis compared approvals with <80 and ≥80 overtime hours per month, combining the two evaluation periods, in FY2022–2025 versus FY2009–2020. We used a Poisson model with a fixed effect for each year, so that both categories are compared within the same year. Anything that affected all approvals in a year equally, such as the number of claims, administrative capacity or the COVID-19 pandemic, therefore cancels out. The model estimates how much the ratio of <80-hour to ≥80-hour approvals changed after the revision. We checked this estimate by:
-- allowing each category its own linear trend;
-- clustering standard errors by year, and using ordinary least squares of the annual log ratio with Newey–West standard errors;
-- excluding single years and shortening the pre-revision period;
-- placing placebo revisions within the pre-revision period.
+**Composition of CCVD approvals.** The main analysis compared approvals with <80 and ≥80 overtime hours per month, combining the two evaluation periods, in FY2022–2025 versus FY2009–2020. We used a quasi-Poisson model (a Poisson model with standard errors scaled for overdispersion) with a fixed effect for each year, so that both categories are compared within the same year. Anything that affected all approvals in a year equally, such as the number of claims, administrative capacity or the COVID-19 pandemic, therefore cancels out. The model estimates how much the ratio of <80-hour to ≥80-hour approvals changed after the revision. We checked this estimate in four ways: by allowing each category its own linear trend; by clustering standard errors by year, and by using ordinary least squares of the annual log ratio with Newey–West standard errors; by excluding single years and shortening the pre-revision period; and by placing placebo revisions within the pre-revision period.
 
-**Evaluation periods.** The threshold is 100 hours for the 1-month period but 80 hours for the 2–6-month period. Using the separate tables for FY2017–2025, we therefore also compared approvals below the threshold of their own evaluation period with approvals above it, and examined each period separately. These categories are defined operationally by the hour thresholds; the revision addressed overtime close to the thresholds combined with other factors, not every case below a threshold. Because these tables cover only 4 years before and 4 years after the revision, we also report the main contrast with category-specific trends, year-clustered standard errors and Newey–West standard errors (Supplementary Table S4). The evaluation-period analyses and the alternative standard errors were added after review of an earlier draft and are post hoc.
+**Evaluation periods.** The threshold is 100 hours for the 1-month period but 80 hours for the 2–6-month period. Using the separate tables for FY2017–2025, we therefore also compared approvals below the threshold of their own evaluation period with approvals above it, and examined each period separately. These categories are defined operationally by the hour thresholds; the revision addressed overtime close to the thresholds combined with other factors, not every case below a threshold. Because these tables cover only 4 years before and 4 years after the revision, we also report the main contrast with category-specific trends, year-clustered standard errors and Newey–West standard errors (Table S4). The evaluation-period analyses and the alternative standard errors were added after review of an earlier draft and are post hoc.
 
 **Other elements of the revision.** We compared approvals for short-term overload and extraordinary events with approvals with ≥80 hours, and approvals for cardiac disease with those for cerebrovascular disease (severe heart failure was added).
 
@@ -84,39 +74,27 @@ The study used only publicly available aggregate statistics and did not require 
 
 ### 3.1 | CCVD: totals
 
-From FY2009–2020 to FY2022–2025, mean annual claims rose from 826 to 1,028, decisions were stable (686 and 693), and approvals fell from 268 to 217 (Table I). After accounting for the pre-existing downward trend, no significant change in the level of claims (rate ratio [RR] 1.13, 95% CI 0.93–1.36), approvals (RR 1.11, 0.93–1.33) or the approval rate (odds ratio [OR] 1.17, 0.90–1.51) was detected. The estimate for the approval rate depended on the analytic window (Supplementary Table S3), so we regard the change in the approval rate as uncertain.
+From FY2009–2020 to FY2022–2025, mean annual claims rose from 826 to 1,028, decisions were stable (686 and 693), and approvals fell from 268 to 217 (Table I). After accounting for the pre-existing downward trend, no significant change in the level of claims (rate ratio [RR] 1.13, 95% CI 0.93–1.36), approvals (RR 1.11, 0.93–1.33) or the approval rate (odds ratio [OR] 1.17, 0.90–1.51) was detected. The estimate for the approval rate depended on the analytic window (Table S3), so we regard the change in the approval rate as uncertain.
 
 ### 3.2 | CCVD: composition
 
 The composition of approvals changed markedly (Figure 1; Table II).
 
-| Approvals per year | FY2009–2020 | FY2022–2025 |
-|---|---:|---:|
-| <80 overtime hours/month | 18.6 | 48.5 |
-| ≥80 overtime hours/month | 230.9 | 141.0 |
-| Short-term overload and extraordinary events | 18.9 | 27.5 |
-
-The share of approvals with <80 hours rose from 7.0% to 22.5%. Relative to approvals with ≥80 hours, approvals with <80 hours increased 4.27-fold (95% CI 3.28–5.57). The estimate changed little when each category had its own trend (3.81, 2.22–6.53), when standard errors were clustered by year (4.27, 2.95–6.20; with category trends, 3.81, 1.73–8.37), with Newey–West standard errors (3.88, 2.33–6.48), or when single years were excluded or the pre-revision period was shortened (4.01–4.54). Placebo revisions in the pre-revision period gave ratio changes of 0.71–1.12.
+Mean annual approvals with <80 hours of overtime per month rose from 18.6 in FY2009–2020 to 48.5 in FY2022–2025, while approvals with ≥80 hours fell from 230.9 to 141.0. Approvals for short-term overload and extraordinary events rose from 18.9 to 27.5. The mean annual share of approvals with <80 hours rose from 7.0% to 22.5%. Relative to approvals with ≥80 hours, approvals with <80 hours increased 4.27-fold (95% CI 3.28–5.57). The estimate changed little when each category had its own trend (3.81, 2.22–6.53), when standard errors were clustered by year (4.27, 2.95–6.20; with category trends, 3.81, 1.73–8.37), with Newey–West standard errors (3.88, 2.33–6.48), or when single years were excluded or the pre-revision period was shortened (4.01–4.54). Placebo revisions in the pre-revision period gave ratio changes of 0.71–1.12.
 
 Approvals for short-term overload and extraordinary events also increased relative to approvals with ≥80 hours (2.38, 1.46–3.89). The ratio of cardiac to cerebrovascular approvals did not change (0.98, 0.86–1.11).
 
 ### 3.3 | CCVD: evaluation periods
 
-Table III and Figure 3A show the two evaluation periods separately for FY2017–2025.
+Table III and Figure 3A show the two evaluation periods separately for FY2017–2025. In the 1-month period, approvals with ≥100 hours fell from 75.8 to 44.3 per year, and those with <100 hours rose from 3.8 to 17.3. In the 2–6-month period, approvals with 80–100 hours fell from 82.3 to 48.3 per year, those with <80 hours rose from 17.0 to 42.5, and those with ≥100 hours changed little (33.8 and 37.3). The total for this period changed little (133.0 and 128.0).
 
-- **1-month period:** approvals with ≥100 hours fell from 75.8 to 44.3 per year, and those with <100 hours rose from 3.8 to 17.3.
-- **2–6-month period:** approvals with 80–100 hours fell from 82.3 to 48.3 per year, those with <80 hours rose from 17.0 to 42.5, and those with ≥100 hours changed little (33.8 and 37.3). The total for this period changed little (133.0 and 128.0).
-
-Approvals below the threshold of their evaluation period rose from 7.1%–12.0% of all approvals in FY2017–2020 to 22.7%–33.5% in FY2022–2025. Relative to approvals above the thresholds, they increased 4.26-fold (2.84–6.37). This estimate was less precise when each category had its own trend (3.60, 1.25–10.35), and its confidence interval included 1 when standard errors were also clustered by year (0.50–25.87; Supplementary Table S4). With only 4 years on each side, these analyses are descriptive evidence that agrees with the main analysis but cannot confirm it on their own.
+Approvals below the threshold of their evaluation period rose from 7.1%–12.0% of all approvals in FY2017–2020 to 22.7%–33.5% in FY2022–2025. Relative to approvals above the thresholds, they increased 4.26-fold (2.84–6.37). This estimate was less precise when each category had its own trend (3.60, 1.25–10.35), and its confidence interval included 1 when standard errors were also clustered by year (0.50–25.87; Table S4). With only 4 years on each side, these analyses are descriptive evidence that agrees with the main analysis but cannot confirm it on their own.
 
 In the combined tables, approvals with 80–100 hours did not change relative to those with ≥100 hours (0.96, 0.81–1.13; Figure 3B). This is because 1-month cases below the 1-month threshold moved into the combined 80–100-hour band after the revision, offsetting the decline in 2–6-month cases (within the 2–6-month period: 0.53, 0.40–0.71).
 
 ### 3.4 | Mental disorders
 
-Claims rose from 1,136 in FY2009 to 4,958 in FY2025, and approvals from 234 to 1,082 (Figure 2A; Table I).
-- **2011 criteria:** the approval rate increased (OR 1.63, 1.34–1.99), while claims did not change.
-- **2020 revision:** approvals increased (RR 1.22, 1.06–1.40).
-- **2023 revision:** claims (RR 1.43, 1.26–1.63) and approvals (RR 1.54, 1.37–1.74) increased with an unchanged approval rate. However, the increase in claims was not distinguishable from a steeper trend that began in FY2020 (Supplementary Table S3).
+Claims rose from 1,136 in FY2009 to 4,958 in FY2025, and approvals from 234 to 1,082 (Figure 2A; Table I). After the 2011 criteria, the approval rate increased (OR 1.63, 1.34–1.99), while claims did not change. After the 2020 revision, approvals increased (RR 1.22, 1.06–1.40). After the 2023 revision, claims (RR 1.43, 1.26–1.63) and approvals (RR 1.54, 1.37–1.74) increased with an unchanged approval rate. However, the increase in claims was not distinguishable from a steeper trend that began in FY2020 (Table S3).
 
 Almost all of the growth was in approvals made without examining working hours, which rose from 139 per year in FY2017–2019 to 315 in FY2020–2022 and 657 in FY2024–2025 (from 24%–31% to 58%–65% of all approvals; Figure 2C; Table IV). Approvals with ≥80 and with <80 hours each stayed at about 150–230 per year. Mean processing time fell from 255 days in FY2011 to 216 days in FY2015–2017, then rose to 277–278 days in FY2023–2024, above both the 8-month standard processing period (about 240 days) and the administrative target of 215 days (Figure 2D).²⁵ Over the same period, annual decisions rose from 1,355 (FY2016) to 3,496 (FY2024). Approvals for suicide, including attempts, stayed at 63–99 per year.
 
@@ -129,9 +107,12 @@ After Japan's 2021 revision of the CCVD criteria, total approvals did not change
 ### 4.2 | What explains the shift in CCVD approvals?
 
 Three explanations, which are not mutually exclusive, fit the data.
-- **Wider eligibility:** workers with overtime below the thresholds and other workload factors, who would previously have been rejected, were approved under the revised criteria. This is the intended effect.
-- **Lower working hours:** overtime caps introduced in April 2019 (April 2020 for small and medium-sized employers) limit overtime, including holiday work, to less than 100 hours in a single month and to an average of no more than 80 hours over 2–6 months, close to the thresholds of the criteria.²¹ From April 2019, employers were also required to record working hours objectively.³² If the hours of workers who develop CCVD fell to just below the thresholds, the revision may have maintained, rather than extended, compensation for them. Because decisions follow onset by about a year, any effect of the caps would appear around FY2020–2022, at the same time as the revision. However, the caps applied to construction and driving only from April 2024, and drivers have an annual limit of 960 hours instead of the monthly limits,³³ although road freight transport accounts for the largest share of CCVD approvals.²²
-- **Changes in how hours were recorded:** changes in the documentation or assessment of overtime may have shifted the recorded distribution of approved cases across the thresholds, without corresponding changes in actual hours or eligibility.
+
+**Wider eligibility.** Workers with overtime below the thresholds and other workload factors, who would previously have been rejected, were approved under the revised criteria. This is the intended effect.
+
+**Lower working hours.** Overtime caps introduced in April 2019 (April 2020 for small and medium-sized employers) limit overtime, including holiday work, to less than 100 hours in a single month and to an average of no more than 80 hours over 2–6 months, close to the thresholds of the criteria.²¹ From April 2019, employers were also required to record working hours objectively.³² If the hours of workers who develop CCVD fell to just below the thresholds, the revision may have maintained, rather than extended, compensation for them. Because decisions follow onset by about a year, any effect of the caps would appear around FY2020–2022, at the same time as the revision. However, the caps applied to construction and driving only from April 2024, and drivers have an annual limit of 960 hours instead of the monthly limits,³³ although road freight transport accounts for the largest share of CCVD approvals.²²
+
+**Changes in how hours were recorded.** Changes in the documentation or assessment of overtime may have shifted the recorded distribution of approved cases across the thresholds, without corresponding changes in actual hours or eligibility.
 
 Some observations favour the first explanation: the number of approvals below 80 hours more than doubled, which a falling reference category cannot produce on its own, and the pre-revision share below 80 hours had no sustained upward trend (4.8%–10.6% in FY2009–2020). Other observations fit the second and third explanations at least as well: in the 2–6-month period, the decline was concentrated just above the threshold, approvals with ≥100 hours were stable, and the total changed little. Other contemporaneous changes, including the COVID-19 pandemic, may also have affected the overtime categories differently. Distinguishing these explanations would require the number of rejected claims by recorded overtime, or individual-level data.
 
@@ -156,18 +137,12 @@ The rise in processing time suggests that broader criteria need matching investi
 
 The study used complete national statistics over 17 years, separated claiming, throughput and adjudication, and examined each evaluation period separately. The data and code are publicly available.
 
-It has several limitations.
-- **Aggregate data:** we could not follow individual claims, and hours are tabulated only for approved cases, so approval rates by overtime category could not be calculated.
-- **Recorded overtime:** the categories reflect the hours established in the investigation, which may be underestimated and may themselves change after a revision.
-- **Concurrent events:** overtime caps, the requirement to record working hours, the COVID-19 pandemic and harassment-prevention legislation coincided with the revisions. We therefore report associations, not causal effects.
-- **Short series:** the evaluation-period tables and mental disorder categories begin in FY2017, and follow-up after the 2021 and 2023 revisions was 4 and 2 years. The evaluation-period analyses were added after review of an earlier draft and are imprecise when category-specific trends are allowed.
-- **Data sources:** the combined CCVD tables came from different sources before and after FY2020, although they matched in the overlapping years.
+It has several limitations. First, the data are aggregate: we could not follow individual claims, and hours are tabulated only for approved cases, so approval rates by overtime category could not be calculated. Second, the overtime categories reflect the hours established in the investigation, which may be underestimated and may themselves change after a revision. Third, there was no control series, because all claims in Japan are decided under the same criteria, and overtime caps, the requirement to record working hours, the COVID-19 pandemic and harassment-prevention legislation coincided with the revisions. We therefore report associations, not causal effects. Fourth, some series are short: the evaluation-period tables and mental disorder categories begin in FY2017, and follow-up after the 2021 and 2023 revisions was 4 and 2 years. The evaluation-period analyses were added after review of an earlier draft and are imprecise when category-specific trends are allowed. Fifth, the combined CCVD tables came from different sources before and after FY2020, although they matched in the overlapping years. Finally, the findings come from one country, and the size of any shift after a revision will depend on how each system defines its thresholds.
 
 ### 4.7 | Conclusions
 
 After Japan's 2021 revision of the recognition criteria for overwork-related CCVD, approved cases shifted below the karoshi line, while no change in total approvals was detected. Because approvals just above the thresholds declined as those below them rose, aggregate statistics cannot show whether the revision extended compensation to newly eligible workers or maintained it for workers whose recorded hours fell. Evaluations of recognition criteria should examine the categories that the criteria address together with adjacent categories, and compensation statistics should report rejected claims by the same categories.
 
----
 
 ## ACKNOWLEDGMENTS
 
@@ -177,7 +152,6 @@ Generative artificial intelligence tools were used in this work. Claude (Anthrop
 
 All data analysed are publicly available government statistics. The transcribed data, analysis code and outputs are publicly available in an online repository; the link is withheld for anonymised review and is given on the Title Page. An anonymised copy is provided as Supporting Information.
 
----
 
 ## REFERENCES
 
@@ -213,13 +187,23 @@ All data analysed are publicly available government statistics. The transcribed 
 30. von Elm E, Altman DG, Egger M, et al. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies. *Lancet.* 2007;370(9596):1453-1457.
 31. Benchimol EI, Smeeth L, Guttmann A, et al. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. *PLoS Med.* 2015;12(10):e1001885.
 32. Industrial Safety and Health Act (Act No. 57 of 1972), Article 66-8-3, as amended by Act No. 71 of 2018, in force 1 April 2019 [in Japanese].
-33. Ministry of Health, Labour and Welfare. Hatarakikata Susume: work-style reform for construction, drivers and physicians [website, in Japanese]. https://hatarakikatasusume.mhlw.go.jp/ (accessed 9 November 2026).
+33. Ministry of Health, Labour and Welfare. Hatarakikata Susume: work-style reform for construction, drivers and physicians [website, in Japanese]. https://hatarakikatasusume.mhlw.go.jp/ (accessed 10 November 2026).
 
----
 
-## TABLES (each to be uploaded as a separate editable Word file)
 
-### Table I. Claims, decisions and approvals before and after each revision, with level changes estimated by interrupted time series
+## FIGURE LEGENDS
+
+**Figure 1.** Approved claims for cerebro-cardiovascular disease by overtime, Japan, FY2009–2025. (A) Approvals by average monthly overtime (≥80 hours, <80 hours) and approvals for short-term overload or extraordinary events, combining the 1-month and 2–6-month evaluation periods. (B) Share of approvals with <80 hours; dotted lines show the means for FY2009–2020 and FY2022–2025. The dashed line marks the revision of September 2021; FY2021 was a transition year.
+
+**Figure 2.** Workers' compensation for mental disorders, Japan. (A) Claims, decisions and approvals, FY2009–2025. (B) Approval rate for all approvals and for suicides, including attempts. (C) Approvals by monthly overtime, FY2017–2025; labels give the percentage approved without examining working hours, and dashed lines separate the fiscal years before and after the 2020 revision and the transition year FY2023 from later years. (D) Mean days from claim to decision, FY2009–2024; the dotted line marks the 8-month standard processing period (about 240 days). In panels A, B and D, dashed lines mark the revisions of December 2011, May 2020 and September 2023.
+
+**Figure 3.** Composition of approvals for cerebro-cardiovascular disease after the 2021 revision. (A) Approvals by evaluation period and overtime, FY2017–2025: solid lines, 2–6-month period (threshold about 80 hours per month); dashed lines, 1-month period (threshold about 100 hours). (B) Change in the ratio of approvals after the revision, from quasi-Poisson models with year fixed effects. Orange: categories addressed by the revision; blue: other comparisons. Comparisons marked * use the separate evaluation-period tables (FY2022–2025 vs FY2017–2020); the others use the tables combining the two evaluation periods (FY2022–2025 vs FY2009–2020).
+
+
+
+## TABLES
+
+# Table I. Claims, decisions and approvals before and after each revision, with level changes estimated by interrupted time series
 
 | Disease / revision | Period | Claims | Decisions | Approvals | Approval rate, % | Claims RR (95% CI) | Approvals RR (95% CI) | Approval rate OR (95% CI) |
 |---|---|---:|---:|---:|---:|---|---|---|
@@ -235,10 +219,18 @@ All data analysed are publicly available government statistics. The transcribed 
 *Notes:*
 - Values are annual means. The approval rate is approvals divided by decisions.
 - Level changes are post-revision steps from segmented regression with a linear trend (quasi-Poisson for counts; quasi-binomial weighted by decisions for the approval rate).
-- CCVD: FY2009–2025, FY2021 excluded. Mental disorders: three revisions modelled together over FY2009–2025, FY2023 excluded. When a change in slope from FY2020 was added, the 2023 step in claims was 1.00 (0.85–1.18) (Supplementary Table S3).
+- CCVD: FY2009–2025, FY2021 excluded. Mental disorders: three revisions modelled together over FY2009–2025, FY2023 excluded. When a change in slope from FY2020 was added, the 2023 step in claims was 1.00 (0.85–1.18) (Table S3, Supporting Information).
 - Abbreviations: CCVD, cerebro-cardiovascular disease; CI, confidence interval; FY, fiscal year (April–March); OR, odds ratio; RR, rate ratio.
 
-### Table II. Change in the composition of CCVD approvals after the 2021 revision (combined evaluation periods)
+
+# Table II. Composition of CCVD approvals before and after the 2021 revision (combined evaluation periods)
+
+| Approvals per year (mean) | FY2009–2020 | FY2022–2025 |
+|---|---:|---:|
+| <80 overtime hours/month | 18.6 | 48.5 |
+| ≥80 overtime hours/month | 230.9 | 141.0 |
+| Short-term overload or extraordinary events | 18.9 | 27.5 |
+| <80 hours/month, mean annual % of all approvals | 7.0 | 22.5 |
 
 | Analysis | Ratio change, FY2022–2025 vs pre-revision (95% CI) |
 |---|---|
@@ -258,9 +250,9 @@ All data analysed are publicly available government statistics. The transcribed 
 - Overtime is the average monthly overtime in the evaluation period, combining the 1-month and 2–6-month tables. FY2021 was excluded.
 - Ratio changes are from quasi-Poisson models with year fixed effects unless stated otherwise. 95% CIs for single-year exclusions: FY2013, 3.51–5.79; FY2020, 3.32–5.73; FY2022, 3.01–5.34.
 - The 80–100 h versus ≥100 h contrast mixes the two evaluation periods and is not a valid negative control (see Table III).
-- Annual means of approvals are shown in the text (section 3.2).
 
-### Table III. CCVD approvals by evaluation period and overtime, FY2017–2025
+
+# Table III. CCVD approvals by evaluation period and overtime, FY2017–2025
 
 | FY | 1 month: ≥100 h | 1 month: <100 h | 2–6 months: ≥100 h | 2–6 months: 80–100 h | 2–6 months: <80 h | Short-term overload or extraordinary event | Below the threshold, % of all approvals |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -287,9 +279,10 @@ All data analysed are publicly available government statistics. The transcribed 
 *Notes:*
 - Thresholds: about 100 hours in the month before onset, or about 80 hours per month on average over 2–6 months.
 - "Below the threshold" is 1 month <100 h plus 2–6 months <80 h, as a percentage of all approvals (including short-term overload and extraordinary events). In the ratio-change models, "above" is approvals for long-term overload at or above the threshold of their evaluation period; short-term overload and extraordinary events are excluded.
-- Separate tables for each evaluation period are published from FY2017. These analyses are post hoc; sensitivity analyses are in Supplementary Table S4.
+- Separate tables for each evaluation period are published from FY2017. These analyses are post hoc; sensitivity analyses are in Table S4 (Supporting Information).
 
-### Table IV. Mental disorder approvals by monthly overtime and processing time
+
+# Table IV. Mental disorder approvals by monthly overtime and processing time
 
 | FY | Approvals | ≥80 h | <80 h | Without examining hours, n (%) | Mean days, claim to decision |
 |---|---:|---:|---:|---:|---:|
@@ -312,19 +305,9 @@ All data analysed are publicly available government statistics. The transcribed 
 - "Without examining hours": cases judged work-related because the psychological load of a workplace event was rated strong on its own.
 - Processing time for FY2017–2020 is converted from months (×30); FY2021–2024 is reported in days.
 
----
 
-## FIGURE LEGENDS
 
-**Figure 1.** Approved claims for cerebro-cardiovascular disease by overtime, Japan, FY2009–2025. (A) Approvals by average monthly overtime (≥80 hours, <80 hours) and approvals for short-term overload or extraordinary events, combining the 1-month and 2–6-month evaluation periods. (B) Share of approvals with <80 hours; dotted lines show the means for FY2009–2020 and FY2022–2025. The dashed line marks the revision of September 2021; FY2021 was a transition year.
-
-**Figure 2.** Workers' compensation for mental disorders, Japan. (A) Claims, decisions and approvals, FY2009–2025. (B) Approval rate for all approvals and for suicides, including attempts. (C) Approvals by monthly overtime, FY2017–2025; labels give the percentage approved without examining working hours. (D) Mean days from claim to decision, FY2009–2024; the dotted line marks the 8-month standard processing period (about 240 days). Dashed lines mark the revisions of December 2011, May 2020 and September 2023.
-
-**Figure 3.** Composition of approvals for cerebro-cardiovascular disease after the 2021 revision. (A) Approvals by evaluation period and overtime, FY2017–2025: solid lines, 2–6-month period (threshold about 80 hours per month); dashed lines, 1-month period (threshold about 100 hours). (B) Change in the ratio of approvals after the revision, from quasi-Poisson models with year fixed effects. Orange: categories addressed by the revision; blue: other comparisons. Comparisons marked * use the separate evaluation-period tables (FY2022–2025 vs FY2017–2020); the others use the combined tables (FY2022–2025 vs FY2009–2020).
-
----
-
-## SUPPORTING INFORMATION
+# Supporting Information
 
 ### Table S1. Content of the revisions
 
@@ -335,8 +318,130 @@ All data analysed are publicly available government statistics. The transcribed 
 | Mental, 29 May 2020 | Power harassment added as an event, following legislation requiring employers to prevent harassment. |
 | Mental, 1 Sep 2023 | Customer harassment added; examples of harassment expanded; recognition of aggravated pre-existing disorders broadened; fewer cases require a panel of specialists, so more decisions can rest on a single specialist's opinion. |
 
-### Table S2. Data sources by series and fiscal year
-Provided as a separate file (the data dictionary of the repository): source document, table number and fiscal years for every series.
+### Table S2. Data sources by series and fiscal year (data dictionary)
+
+
+All files are UTF-8 CSV.
+
+- `fy` is the Japanese fiscal year (April to March).
+- Claims are counted by fiscal year of filing; decisions and approvals by fiscal year of decision.
+- Counts are for work-related cases. Cases under the "multiple-employment factor" category introduced in 2020 are excluded.
+- Every value is transcribed in `code/build_data.py`, with the source and cross-checks noted next to it.
+- Unless stated otherwise, the source is:
+  - "Annual report": MHLW, 過労死等の労災補償状況 (Status of workers' compensation for karoshi and related disorders), annexes 1 (CCVD) and 2 (mental disorders).
+  - Editions are cited by Japanese era year (令和5年度版 = FY2023 edition).
+  - Each edition reports the current and preceding fiscal years. Values for overlapping years were checked against each other.
+
+#### `cvd_national.csv` — cerebro-cardiovascular disease (CCVD), national totals
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year, 2001–2025 |
+| `claims`, `claims_death` | 請求件数 (claims filed); of which deaths |
+| `decisions`, `decisions_death` | 決定件数 (claims decided); of which deaths |
+| `approvals`, `approvals_death` | 支給決定件数 (claims approved as work-related); of which deaths |
+
+| Fiscal years | Variables | Source |
+|---|---|---|
+| FY2001–2019 | claims and approvals | MHLW, Expert Committee on Recognition Criteria for CCVD, 2nd meeting, material 1 (2020; mhlw.go.jp/content/11201000/000650614.pdf), table 1 |
+| FY2008–2012 | decisions | Osaka Labour Bureau, press release of 27 June 2013, table 1-1 (national column) |
+| FY2013 | decisions | Annual report, 平成29年度版, table 1-1 |
+| FY2014–2018 | decisions | Annual report, 平成30年度版, table 1-1 |
+| FY2019–2025 | all variables | Annual report, 令和5年度版 and 令和7年度版, table 1-1; FY2020–2024 also checked against 令和6年度版 |
+
+#### `cvd_overtime_bands.csv` — CCVD approvals by overtime category
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year, 2007–2025 |
+| `period` | `combined` (the 1-month and 2–6-month evaluation periods together); `m1` (1-month table); `m26` (2–6-month table); `m1+m26` (category `other`, reported once) |
+| `band` | average monthly overtime in the evaluation period: `lt45`, `45_60`, `60_80`, `80_100`, `100_120`, `120_140`, `140_160`, `ge160` (hours); `other` = short-term overload or extraordinary events |
+| `n` | approvals |
+| `source` | source label |
+
+| Fiscal years | Rows | Source |
+|---|---|---|
+| FY2007–2019 | `combined` | Expert committee material 1 (2020), table 5 |
+| FY2017–2025 | `m1` and `m26` | Annual reports, table 1-6, in the following editions: 平成30年度版 (FY2017–2018), 令和2年度版 (FY2019–2020), 令和4年度版 (FY2021), 令和5年度版 (FY2022–2023), 令和7年度版 (FY2024–2025) |
+| FY2020–2025 | `combined` | Sum of the `m1` and `m26` rows |
+
+The order of the rows was checked against the narrative text of each report, which states the most frequent category. For every year, the `combined` rows sum to the approvals in `cvd_national.csv`.
+
+#### `cvd_by_type.csv` — CCVD by disease type
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year |
+| `type` | 脳血管疾患 (cerebrovascular disease); 虚血性心疾患等 (ischaemic heart disease and other cardiac conditions, including severe heart failure from September 2021) |
+| `approvals` | approvals |
+| `claims`, `decisions`, deaths | available only for FY2020 and FY2022–2025 |
+
+| Fiscal years | Variables | Source |
+|---|---|---|
+| FY2001–2019 | approvals | Expert committee material 1 (2020), table 6 |
+| FY2020, FY2022–2025 | all variables | Annual reports, table 1-5 (total row) |
+| FY2021 | approvals | White Paper on Measures to Prevent Karoshi, 2024 edition (令和6年版過労死等防止対策白書), figure 4-1-1-4 |
+
+#### `mental_national.csv` — mental disorders, national totals
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year, 1999–2025 (decisions from FY2009) |
+| `claims`, `decisions`, `approvals` | national totals |
+| `claims_suicide`, `decisions_suicide`, `approvals_suicide` | suicides, including attempts, FY2009–2025 |
+
+Sources:
+- FY1999–2020: MHLW, Expert Committee on Recognition Criteria for Mental Disorders, 1st meeting (December 2021; mhlw.go.jp/content/11201000/000862995.pdf).
+- FY2019–2025: Annual reports, annex 2, table 2-1 (令和5年度版 and 令和7年度版).
+- Built from `rosai_mental_national.csv`.
+
+#### `mental_overtime_bands.csv` — mental disorder approvals by monthly overtime category
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year, 2017–2025 |
+| `band` | overtime in the month before onset: `lt20`, `20_40`, `40_60`, `60_80`, `80_100`, `100_120`, `120_140`, `140_160`, `ge160` (hours); `other` = judged work-related without the need to examine working hours (その他) |
+| `n` | approvals |
+
+Sources (annual reports, table 2-6, unless noted):
+
+| Fiscal years | Edition |
+|---|---|
+| FY2017–2018 | 平成30年度版 |
+| FY2019 | 令和元年度版 |
+| FY2020 | Expert committee material (2021) |
+| FY2021 | 令和4年度版 |
+| FY2022–2023 | 令和5年度版 |
+| FY2024–2025 | 令和7年度版 |
+
+FY2020–2024 were also checked against 令和6年度版, tables 2-1 and 2-6. The rows for each year sum to the approvals in `mental_national.csv`.
+
+#### `mental_processing_time.csv` — mental disorders, mean time from claim to decision
+
+| column | meaning |
+|---|---|
+| `fy` | fiscal year, 2007–2024 |
+| `mean_months`, `median_months` | months (median for FY2007–2020 only) |
+| `days` | days |
+
+| Fiscal years | Source and conversion |
+|---|---|
+| FY2007–2020 | Months, from expert committee material (2021), section 8. Converted to days as months × 30, the conversion used in the source. |
+| FY2021–2024 | Days, from MHLW policy evaluation pre-analysis sheets, policy objective III-3-1 (FY2024 and FY2025 editions), performance indicator on processing time |
+
+FY2020 (255 days) matches in both sources.
+
+#### Files shared with a related repository
+
+These files are transcribed in the same way as in a related repository [withheld for anonymised review]
+
+| File | Content | Source |
+|---|---|---|
+| `rosai_mental_national.csv` | mental disorders, national claims, decisions and approvals | Annual reports, table 2-1 |
+| `rosai_mental_by_industry.csv` | mental disorders by industry: `fy`, `industry` (Japanese Standard Industrial Classification divisions), `approvals`, `claims` | Annual reports, table 2-2 |
+| `rosai_cvd_by_industry.csv` | CCVD by industry: `fy`, `industry`, `cvd_claims`, `cvd_approvals` | Annual reports, table 1-2 |
+| `employment_by_industry.csv` | employed persons by industry, in 10,000 persons; `year` (calendar year), used as the denominator for the fiscal year beginning in that year | Statistics Bureau of Japan, Labour Force Survey, basic tabulation, table 2-5-1, annual averages |
+
 
 ### Table S3. Sensitivity analyses of interrupted time series estimates
 
@@ -367,4 +472,35 @@ Provided as a separate file (the data dictionary of the repository): source docu
 *Notes:* 8 fiscal years (FY2021 excluded). With 8 clusters, clustered intervals rely on a normal approximation and are themselves imprecise. Post hoc analyses.
 
 ### STROBE/RECORD checklist
-Provided as a separate file.
+
+| Item | Recommendation (abbreviated) | Where reported |
+|---|---|---|
+| 1 Title and abstract | Design in title; informative abstract | Title ("interrupted time series and within-category analyses"); Abstract |
+| RECORD 1.1–1.3 | Data type, setting, linkage | Abstract Methods ("national statistics"); 2.2 (published aggregate tables; no linkage) |
+| 2 Background | Scientific background and rationale | 1, paragraphs 1–3 |
+| 3 Objectives | Objectives and hypotheses | 1, last paragraph |
+| 4 Study design | Key elements of design | 2.3 (interrupted time series; within-category fixed-effects models) |
+| 5 Setting | Setting, locations, periods | 2.1; 2.2 (FY2009–2025; fiscal year definition) |
+| 6 Participants | Eligibility, sources | 2.2 (all compensation claims for CCVD and mental disorders in Japan; multiple-job cases excluded) |
+| RECORD 6.1–6.3 | Codes/algorithms; validation; linkage | 2.2 (administrative categories defined by the criteria; overtime bands; event-alone category). Not applicable: no individual-level data and no linkage |
+| 7 Variables | Outcomes, exposures, confounders | 2.2–2.3 (outcomes; revision indicators; year fixed effects; trends) |
+| RECORD 7.1 | Codes used to classify | 2.2; Table III notes; Table S2 |
+| 8 Data sources/measurement | Sources and methods of measurement | 2.2; Table S2 (source document and table for each series) |
+| 9 Bias | Efforts to address bias | 2.3 (year fixed effects, trends, placebo, evaluation-period analysis); 4.2; 4.6 |
+| 10 Study size | How size was arrived at | 2.2 (all national cases; 17 fiscal years) |
+| 11 Quantitative variables | Handling and grouping | 2.2 (overtime bands as published; combining evaluation periods); 2.3 |
+| 12 Statistical methods | Models, missing data, sensitivity analyses | 2.3 (including post hoc analyses and few-year inference); Tables S3 and S4; missing data in 2.2 (none except FY2025 processing time) |
+| RECORD 12.1–12.2 | Data access and cleaning; linkage | 2.2 (hand transcription with source recorded per value; three checks); repository |
+| 13 Participants | Numbers at each stage | 3.1, 3.4 (claims, decisions, approvals); Table I |
+| 14 Descriptive data | Characteristics | Tables I, III, IV; Figures 1–2 |
+| 15 Outcome data | Numbers of outcome events | Tables I–IV |
+| 16 Main results | Estimates with precision | 3.1–3.4; Tables I–IV |
+| 17 Other analyses | Subgroups, sensitivity | 3.2, 3.3; Tables S3 and S4 |
+| 18 Key results | Summary | 4.1 |
+| 19 Limitations | Bias and imprecision | 4.6 |
+| RECORD 19.1 | Implications of using data not created for research | 4.6 (aggregate data; approved cases only by category; recorded overtime) |
+| 20 Interpretation | Cautious overall interpretation | 4.2, 4.3, 4.7 (associations; alternative explanations) |
+| 21 Generalisability | External validity | 4.5 |
+| 22 Funding | Funding | Title Page |
+| RECORD 22.1 | Access to data and code | Data Availability Statement; repository |
+

@@ -34,10 +34,10 @@ bash run_all.sh
 | 2 First pass | `code/analyze1.py` | `output/results_v1.txt`: decomposition, first-pass interrupted time series, overtime-category tables, the share of approvals below the thresholds by evaluation period (FY2017–2025). Also `output/A_decomposition.csv`, `C_cvd_bands.csv`, `D_mental_bands.csv`. |
 | 3 Robustness | `code/analyze2.py` | `output/results_v2.txt`: interrupted time series sensitivity analyses (window, transition-year coding, slope change, Newey–West, placebo years) and the industry analysis of the 2023 revision (wild cluster score bootstrap with Webb weights, seed 20261109; permutation of industry labels). |
 | 4 Main estimates | `code/analyze4_unified.py` | `output/results_v3_unified.txt`: all main estimates for the common window FY2009–2025. This covers Table I, Table II (including the ranking of the actual timing, in-time placebo windows and the 80–100 h contrast) and the ratio models in Table IV. |
-| 5 Revision 1 | `code/analyze6_revision1.py` | `output/results_v4_revision1.txt`: CCVD approvals by evaluation period (Table III), contrasts within evaluation periods, alternative inference for the main contrast (year-clustered and Newey–West standard errors), and the sensitivity of the evaluation-period contrast (Table S5). Added after pre-submission review (post hoc). |
+| 5 Revision 1 | `code/analyze6_revision1.py` | `output/results_v4_revision1.txt`: CCVD approvals by evaluation period (Table III), contrasts within evaluation periods, alternative inference for the main contrast (year-clustered and Newey–West standard errors), and the sensitivity of the evaluation-period contrast (Table S4). Added after pre-submission review (post hoc). |
 | 6 Figures | `code/make_figures_en.py` | `output/AJIM_Figure1`–`AJIM_Figure3` (`.png` for viewing; `.tif`, RGB 600 dpi, for submission) |
 
-### Where each number in the paper comes from (manuscript v4)
+### Where each number in the paper comes from (submitted manuscript)
 
 | Paper | Source |
 |---|---|
@@ -49,7 +49,7 @@ bash run_all.sh
 | Table S3 (sensitivity of interrupted time series) | `results_v3_unified.txt` section B; `results_v2.txt` sections I and I2 |
 | Table S4 (sensitivity of the evaluation-period comparison) | `results_v4_revision1.txt` section 4 |
 
-Some outputs are not reported in manuscript v4 but are kept for transparency: the ranking of the actual timing among all 1,820 assignments of post-revision years (`results_v3_unified.txt` section C), the target redefined as <100 hours (section C), and the exploratory industry comparison for the 2023 mental disorder revision (`results_v2.txt` section J).
+Some outputs are not reported in the manuscript but are kept for transparency: the ranking of the actual timing among all 1,820 assignments of post-revision years (`results_v3_unified.txt` section C), the target redefined as <100 hours (section C), and the exploratory industry comparison for the 2023 mental disorder revision (`results_v2.txt` section J).
 
 ## Analysis in brief
 
