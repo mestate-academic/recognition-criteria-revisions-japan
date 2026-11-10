@@ -1,4 +1,4 @@
-# Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses
+# Workers' compensation for overwork-related disease after revisions of the recognition criteria in Japan, 2009–2025: an interrupted time series study
 
 **Running title:** Recognition criteria revisions and compensated overwork-related disease
 
@@ -475,7 +475,7 @@ These files are transcribed in the same way as in a related repository [withheld
 
 | Item | Recommendation (abbreviated) | Where reported |
 |---|---|---|
-| 1 Title and abstract | Design in title; informative abstract | Title ("interrupted time series and within-category analyses"); Abstract |
+| 1 Title and abstract | Design in title; informative abstract | Title ("an interrupted time series study"); Abstract |
 | RECORD 1.1–1.3 | Data type, setting, linkage | Abstract Methods ("national statistics"); 2.2 (published aggregate tables; no linkage) |
 | 2 Background | Scientific background and rationale | 1, paragraphs 1–3 |
 | 3 Objectives | Objectives and hypotheses | 1, last paragraph |

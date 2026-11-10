@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these data or code, please cite the paper and this repository."
 type: dataset
-title: "Data and code for: Changes in the composition of workers' compensation approvals after revisions of the recognition criteria for overwork-related disease in Japan, 2009–2025: interrupted time series and within-category analyses"
+title: "Data and code for: Workers' compensation for overwork-related disease after revisions of the recognition criteria in Japan, 2009–2025: an interrupted time series study"
 authors:
   - family-names: Uematsu
     given-names: Hironori
