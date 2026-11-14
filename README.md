@@ -1,10 +1,10 @@
 # Revisions of recognition criteria for overwork-related disease and workers' compensation in Japan, 2009–2025
 
-Data and code for the manuscript "Workers' compensation for overwork-related disease after revisions of the recognition criteria in Japan, 2009–2025: an interrupted time series study" by Hironori Uematsu (Uematsu Occupational Physician's Office / Mestate LLC, Kyoto, Japan). Correspondence: office@mestate.jp.
+Data and code for the manuscript "Workers' Compensation for Overwork-Related Disease Following Revisions to Japan's Recognition Criteria, 2009–2025: An Interrupted Time Series Study" by Hironori Uematsu (Uematsu Occupational Physician's Office / Mestate LLC, Kyoto, Japan). Correspondence: office@mestate.jp.
 
 Repository: https://github.com/mestate-academic/recognition-criteria-revisions-japan
 
-Journal: submitted to the *American Journal of Industrial Medicine*.
+Status: manuscript under submission. The current version of the manuscript is in `manuscript/`. Its additional analyses are produced by `code/analyze7_joem.py` (`output/results_v5_joem.txt`: models excluding each year in turn, placebo models, models for decisions, dispersion) and its figures by `code/make_figures_joem.py` (`output/JOEM_Figure1`–`JOEM_Figure3`; Figure 2 shows the assessment periods and Figure 3 mental disorders).
 
 ## What is here
 

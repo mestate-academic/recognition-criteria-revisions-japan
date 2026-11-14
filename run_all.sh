@@ -9,4 +9,6 @@ echo "3/6 robustness, disease type, permutation, wild bootstrap (about 1 minute)
 echo "4/6 main estimates, FY2009-2025 window";    python3 code/analyze4_unified.py >/dev/null 2>&1
 echo "5/6 evaluation-period analyses and alternative inference (revision 1)"; python3 code/analyze6_revision1.py >/dev/null 2>&1
 echo "6/6 figures (PNG and TIFF 600 dpi)";       python3 code/make_figures_en.py >/dev/null 2>&1
+echo "7/8 additional analyses for the current version (excluded years, placebo models, decisions)"; python3 code/analyze7_joem.py >/dev/null 2>&1
+echo "8/8 figures for the current version (PNG and PDF)"; python3 code/make_figures_joem.py >/dev/null 2>&1
 echo "done: see output/"
