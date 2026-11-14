@@ -57,7 +57,7 @@ mo2=mo.copy(); mo2['g']=mo2.band.map({'lt20':'lt80','20_40':'lt80','40_60':'lt80
 B=mo2.groupby(['fy','g']).n.sum().unstack(); xb=B.index.values
 a.bar(xb,B.ge80,0.72,color=BLUE,label='≥80 h/month',edgecolor='white',linewidth=1)
 a.bar(xb,B.lt80,0.72,bottom=B.ge80,color=ORANGE,label='<80 h/month',edgecolor='white',linewidth=1)
-a.bar(xb,B.oth,0.72,bottom=B.ge80+B.lt80,color=AQUA,label='Approved without examining hours',edgecolor='white',linewidth=1)
+a.bar(xb,B.oth,0.72,bottom=B.ge80+B.lt80,color=AQUA,label='Working-hours assessment not required',edgecolor='white',linewidth=1)
 for xx,v,tot in zip(xb,M.values,B.sum(1).values): a.text(xx,tot+18,f'{v:.0f}%',ha='center',fontsize=11,color=INK)
 for xx in (2019.5,2023.5): a.plot([xx,xx],[0,1190],ls='--',lw=1.2,c=INK)  # between bars: revisions of May 2020 (start of FY2020) and Sep 2023 (FY2023 = transition year)
 a.set_title('C  Approved claims by monthly overtime category',loc='left'); a.set_ylabel('Approved claims'); a.set_ylim(0,1500); a.set_xlim(2016.4,2025.6)
