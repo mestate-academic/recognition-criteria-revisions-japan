@@ -1,0 +1,59 @@
+== 1. Main contrast: 4.27 (3.28-5.57)  dispersion (Pearson chi2/df): 1.55  df_resid: 14
+   excluding FY2009: 4.21 (3.20-5.54)
+   excluding FY2010: 4.27 (3.23-5.65)
+   excluding FY2011: 4.30 (3.25-5.69)
+   excluding FY2012: 4.22 (3.20-5.56)
+   excluding FY2013: 4.51 (3.51-5.79)
+   excluding FY2014: 4.28 (3.23-5.66)
+   excluding FY2015: 4.15 (3.19-5.39)
+   excluding FY2016: 4.18 (3.19-5.46)
+   excluding FY2017: 4.15 (3.19-5.40)
+   excluding FY2018: 4.24 (3.21-5.59)
+   excluding FY2019: 4.46 (3.48-5.72)
+   excluding FY2020: 4.36 (3.32-5.73)
+   excluding FY2022: 4.01 (3.01-5.34)
+   excluding FY2023: 4.50 (3.37-6.01)
+   excluding FY2024: 4.60 (3.46-6.12)
+   excluding FY2025: 4.03 (3.01-5.40)
+   leave-one-year-out range: 4.01 to 4.60
+   pre-revision FY2015-2020: 4.54 (3.11-6.63)
+== 2a. Placebo, 4-year window (FY k to k+3 vs all earlier years from FY2009; data through k+3, <=FY2020)
+   FY2012-2015: 1.06 (0.70-1.62)
+   FY2013-2016: 1.06 (0.72-1.57)
+   FY2014-2017: 0.74 (0.53-1.02)
+   FY2015-2018: 0.71 (0.53-0.94)
+   FY2016-2019: 0.95 (0.63-1.42)
+   FY2017-2020: 1.12 (0.77-1.62)
+   range 0.71 to 1.12
+== 2b. Placebo, step (FY k onward vs earlier years; all of FY2009-2020; at least 3 years each side)
+   from FY2012: 1.05 (0.71-1.57)
+   from FY2013: 1.10 (0.77-1.58)
+   from FY2014: 0.90 (0.64-1.28)
+   from FY2015: 0.90 (0.63-1.28)
+   from FY2016: 1.00 (0.70-1.45)
+   from FY2017: 1.12 (0.77-1.62)
+   from FY2018: 1.33 (0.92-1.93)
+   range 0.90 to 1.33
+== 3. 80-<100 h vs >=100 h, combined tables
+   pre FY2009-2020: 0.96 (0.81-1.13)
+   pre FY2017-2020: 0.93 (0.75-1.15)
+   mean FY2009-2020: {'ge100': 131.1, 'b80_100': 99.8}
+   mean FY2017-2020: {'ge100': 109.5, 'b80_100': 86.0}
+   mean FY2022-2025: {'ge100': 81.5, 'b80_100': 59.5}
+== 4. ITS incl. decisions, with dispersion
+   CCVD claims: s 1.13 (0.93-1.36); dispersion 9.47
+   CCVD decisions: s 1.02 (0.84-1.23); dispersion 7.22
+   CCVD approvals: s 1.11 (0.93-1.33); dispersion 2.28
+   CCVD approval proportion: s 1.17 (0.90-1.51); dispersion 2.91
+   Mental claims: s2012 0.88 (0.74-1.06); s2020 0.99 (0.85-1.16); s2024 1.43 (1.26-1.63); dispersion 10.64
+   Mental decisions: s2012 1.08 (0.97-1.20); s2020 1.13 (1.03-1.23); s2024 1.62 (1.50-1.75); dispersion 3.23
+   Mental approvals: s2012 1.50 (1.28-1.77); s2020 1.22 (1.06-1.40); s2024 1.54 (1.37-1.74); dispersion 2.42
+   Mental approval proportion: s2012 1.63 (1.34-1.99); s2020 1.12 (0.94-1.33); s2024 0.94 (0.81-1.08); dispersion 2.47
+== 5. Pooled approval % (sum approvals / sum decisions)
+   CCVD FY2009-2020: pooled 39.1%, mean of annual 39.0%
+   CCVD FY2022-2025: pooled 31.3%, mean of annual 32.0%
+   Mental FY2009-2011: pooled 29.0%, mean of annual 28.9%
+   Mental FY2012-2014: pooled 37.9%, mean of annual 37.9%
+   Mental FY2017-2019: pooled 32.2%, mean of annual 32.2%
+   Mental FY2020-2022: pooled 33.3%, mean of annual 33.3%
+   Mental FY2024-2025: pooled 29.1%, mean of annual 29.2%
