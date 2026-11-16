@@ -1,7 +1,5 @@
 # Workers' Compensation for Overwork-Related Disease Following Revisions to Japan's Recognition Criteria, 2009–2025: An Interrupted Time Series Study
 
-**Running title:** Recognition Criteria and Overwork-Related Disease
-
 ## ABSTRACT
 
 **Objective:** To examine whether the number of approved workers' compensation claims for cerebro-cardiovascular disease and their distribution by recorded overtime changed after Japan's 2021 revision of its recognition criteria.
@@ -72,11 +70,11 @@ We report 95% confidence intervals without adjustment for multiple comparisons; 
 
 ### Ethical Considerations
 
-The study used only publicly available aggregate statistics that contain no information on identifiable individuals. Ethical review and informed consent were therefore not required.
+The study used only publicly available aggregate statistics that contain no information on identifiable individuals. Ethical review and informed consent were therefore not required. The study was conducted in accordance with the principles of the Declaration of Helsinki.
 
 ### Use of Artificial Intelligence
 
-Generative artificial intelligence (AI) tools were used in this study. Under the author's direction, Claude (Anthropic, San Francisco, CA; Claude Opus 5.5 and Claude Fable 5.2 models, accessed through the claude.ai application in November 2026) was used to develop and execute Python code for data tabulation, statistical modeling, and figure generation. It was also used to draft and edit the English text throughout the manuscript and to format the references. ChatGPT (OpenAI, San Francisco, CA; GPT-6 Astra model) was used in November 2026 for critical review of drafts, AI-assisted reanalysis of the public data, and English-language editing. The AI tools did not supply any data values or references: every numerical result is the output of the archived code applied to the transcribed data. No personal or proprietary data were entered into the tools. The author selected the data sources, transcribed all values and verified them against the original government documents, reviewed the code and its output, and checked every reported result and every reference against its source.
+Generative artificial intelligence (AI) tools were used in this study. Under the author's direction, Claude (Anthropic, San Francisco, CA; Claude Opus 5.5 and Claude Fable 5.2 models, accessed through the claude.ai application in November 2026) was used to develop and execute Python code for data tabulation, statistical modeling, and figure generation. It was also used to draft and edit the English text throughout the manuscript (Abstract, Introduction, Methods, Results, Discussion, and Conclusions) and to search for, compile, and format the references. ChatGPT (OpenAI, San Francisco, CA; GPT-6 Astra model) was used in November 2026 for critical review of drafts, AI-assisted reanalysis of the public data, and English-language editing. The AI tools did not supply any data values: every numerical result is the output of the archived code applied to the transcribed data. No personal or proprietary data were entered into the tools, and no model was trained or fine-tuned for this study. Because generative AI tools can produce incorrect code, inaccurate statements, and nonexistent references, their output was validated as follows. The author selected the data sources, transcribed all values and verified them against the original government documents, reviewed the code and its output, checked every reported result against the output files, and manually checked every reference against its original source. The key estimates were also recalculated from the public data in a separate AI-assisted reanalysis and agreed with the reported values. The author takes full responsibility for the integrity of the content.
 
 ## RESULTS
 
@@ -144,51 +142,80 @@ Further research should assess whether investigative capacity has kept pace with
 
 The study used complete national statistics spanning 17 years, distinguished claim filings from decisions and approved claims, and analyzed the two assessment periods separately. The data and code are publicly available.
 
-The study has several limitations. First, the data are aggregate. We could not follow individual claims, and hours are tabulated only for approved claims, so approval proportions by overtime category could not be calculated. Second, the overtime categories reflect the hours established in the investigation, which may be underestimated and may themselves change after a revision. Third, there was no control series, because all claims in Japan are decided under the same criteria, and several events coincided with the revisions: the overtime caps, the requirement to record working hours, the COVID-19 pandemic, and the harassment-prevention legislation. We therefore report associations, not causal effects. Fourth, the series are short and may be serially correlated. With 16 annual observations, the alternative standard errors are themselves imprecise. The assessment-period tables and the mental disorder categories begin in FY2017, and follow-up after the 2021 and 2023 revisions was 4 and 2 years, respectively. Fifth, we made many comparisons without adjustment for multiplicity, and the assessment-period analyses were post hoc. Sixth, the combined CCVD tables came from different sources before and after FY2020, although they matched in the overlapping years. Finally, the findings come from one country, and the size of any change after a revision will depend on how each system defines its thresholds.
+The study has several limitations. First, the data are aggregate. We could not follow individual claims, and hours are tabulated only for approved claims, so approval proportions by overtime category could not be calculated. Second, the overtime categories reflect the hours established in the investigation, which may be underestimated and may themselves change after a revision. Third, there was no control series, because all claims in Japan are decided under the same criteria, and several events coincided with the revisions: the overtime caps, the requirement to record working hours, the COVID-19 pandemic, and the harassment-prevention legislation. We therefore report associations, not causal effects. Fourth, the series are short and may be serially correlated. With 16 annual observations, the alternative standard errors are themselves imprecise. The assessment-period tables and the mental disorder categories begin in FY2017, and follow-up after the 2021 and 2023 revisions was 4 and 2 years, respectively. Fifth, we made many comparisons without adjustment for multiplicity, and the assessment-period analyses were post hoc. Sixth, the combined CCVD tables came from different sources before and after FY2020, although they matched in the overlapping years. Seventh, generative AI tools were used to write the analysis code and to draft the text. Although the code, the results, and the references were checked as described in the Methods and the code is public, undetected errors remain possible. Finally, the findings come from one country, and the size of any change after a revision will depend on how each system defines its thresholds.
 
 ## CONCLUSIONS
 
 After Japan's 2021 revision of the recognition criteria for overwork-related CCVD, the distribution of approved claims shifted toward lower recorded overtime. The ratio of approved claims involving <80 hours per month to those involving ≥80 hours increased about 4-fold, whereas no clear trend-adjusted level change was detected in the total number of approved claims. These aggregate data cannot establish whether the observed shift reflects broader access to compensation, reduced overtime, changes in recording or adjudication, or a combination of these processes. Evaluations of recognition criteria should examine the categories that the criteria address together with the adjacent categories, and compensation statistics should report denied claims by the same categories.
 
-## DATA AVAILABILITY
-
-All data analyzed are publicly available government statistics. The transcribed data, the analysis code, and the outputs are publicly available in an online repository. The link is given on the title page and is withheld here for blinded review; an anonymized copy of the repository is provided for reviewers as a supplemental file.
-
 ## REFERENCES
 
 1. Spieler EA, Burton JF Jr. The lack of correspondence between work-related disability and receipt of workers' compensation benefits. *Am J Ind Med*. 2012;55:487–505. https://doi.org/10.1002/ajim.21034
+
 2. Azaroff LS, Levenstein C, Wegman DH. Occupational injury and illness surveillance: conceptual filters explain underreporting. *Am J Public Health*. 2002;92:1421–1429. https://doi.org/10.2105/ajph.92.9.1421
+
 3. Kivimäki M, Jokela M, Nyberg ST, et al. Long working hours and risk of coronary heart disease and stroke: a systematic review and meta-analysis of published and unpublished data for 603 838 individuals. *Lancet*. 2015;386:1739–1746. https://doi.org/10.1016/S0140-6736(15)60295-1
+
 4. Pega F, Náfrádi B, Momen NC, et al. Global, regional, and national burdens of ischemic heart disease and stroke attributable to exposure to long working hours for 194 countries, 2000–2016: a systematic analysis from the WHO/ILO Joint Estimates of the Work-related Burden of Disease and Injury. *Environ Int*. 2021;154:106595. https://doi.org/10.1016/j.envint.2021.106595
+
 5. Park J, Kim Y, Cheng Y, Horie S. A comparison of the recognition of overwork-related cardiovascular disease in Japan, Korea, and Taiwan. *Ind Health*. 2012;50:17–23. https://doi.org/10.2486/indhealth.MS1317
+
 6. Yamauchi T, Yoshikawa T, Takamoto M, et al. Overwork-related disorders in Japan: recent trends and development of a national policy to promote preventive measures. *Ind Health*. 2017;55:293–302. https://doi.org/10.2486/indhealth.2016-0198
+
 7. Takahashi M. Sociomedical problems of overwork-related deaths and disorders in Japan. *J Occup Health*. 2019;61:269–277. https://doi.org/10.1002/1348-9585.12016
-8. Ministry of Health, Labour and Welfare. *Report of the Expert Committee on Recognition Criteria for Cerebrovascular and Cardiovascular Diseases* [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; July 16, 2021.
-9. Ministry of Health, Labour and Welfare. *Recognition Criteria for Cerebrovascular Diseases and Ischemic Heart Diseases, etc., Caused by Work That Markedly Aggravates Vascular Lesions, etc.* [in Japanese]. Notification Kihatsu 0914 No. 1. Tokyo: Ministry of Health, Labour and Welfare; September 14, 2021.
-10. Ministry of Health, Labour and Welfare. *Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 1226 No. 1. Tokyo: Ministry of Health, Labour and Welfare; December 26, 2011.
-11. Ministry of Health, Labour and Welfare. *Partial Revision of the Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 0529 No. 1. Tokyo: Ministry of Health, Labour and Welfare; May 29, 2020.
-12. Ministry of Health, Labour and Welfare. *Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 0901 No. 2. Tokyo: Ministry of Health, Labour and Welfare; September 1, 2023.
+
+8. Ministry of Health, Labour and Welfare. *Report of the Expert Committee on Recognition Criteria for Cerebrovascular and Cardiovascular Diseases* [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; July 16, 2021. Available at: https://www.mhlw.go.jp/stf/newpage_19809.html. Accessed November 16, 2026.
+
+9. Ministry of Health, Labour and Welfare. *Recognition Criteria for Cerebrovascular Diseases and Ischemic Heart Diseases, etc., Caused by Work That Markedly Aggravates Vascular Lesions, etc.* [in Japanese]. Notification Kihatsu 0914 No. 1. Tokyo: Ministry of Health, Labour and Welfare; September 14, 2021. Available at: https://www.mhlw.go.jp/stf/newpage_21017.html. Accessed November 16, 2026.
+
+10. Ministry of Health, Labour and Welfare. *Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 1226 No. 1. Tokyo: Ministry of Health, Labour and Welfare; December 26, 2011. Available at: https://www.mhlw.go.jp/stf/houdou/2r9852000001z3zj-att/2r9852000001z43h.pdf. Accessed November 16, 2026.
+
+11. Ministry of Health, Labour and Welfare. *Partial Revision of the Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 0529 No. 1. Tokyo: Ministry of Health, Labour and Welfare; May 29, 2020. Available at: https://www.mhlw.go.jp/stf/newpage_11494.html. Accessed November 16, 2026.
+
+12. Ministry of Health, Labour and Welfare. *Recognition Criteria for Mental Disorders Caused by Psychological Load* [in Japanese]. Notification Kihatsu 0901 No. 2. Tokyo: Ministry of Health, Labour and Welfare; September 1, 2023. Available at: https://www.mhlw.go.jp/stf/newpage_34888.html. Accessed November 16, 2026.
+
 13. Lin RT, Lin CK, Christiani DC, et al. The impact of the introduction of new recognition criteria for overwork-related cardiovascular and cerebrovascular diseases: a cross-country comparison. *Sci Rep*. 2017;7:167. https://doi.org/10.1038/s41598-017-00198-5. Author correction: *Sci Rep*. 2018;8:4654. https://doi.org/10.1038/s41598-018-23047-5
+
 14. Kim UJ, Choi WJ, Kang SK, et al. Standards for recognition and approval rate of occupational cerebro-cardiovascular diseases in Korea. *Ann Occup Environ Med*. 2022;34:e30. https://doi.org/10.35371/aoem.2022.34.e30
+
 15. Collie A, Beck D, Gray SE, Lane TJ. Impact of legislative reform on benefit access and disability duration in workers' compensation: an interrupted time series study. *Occup Environ Med*. 2020;77:32–39. https://doi.org/10.1136/oemed-2019-106063
+
 16. Lane TJ, Di Donato MF, Collie A. Injured worker outcomes after compensation system overhaul: an interrupted time series study. *J Epidemiol Community Health*. 2023;77:515–520. https://doi.org/10.1136/jech-2023-220387
+
 17. Rautiainen RH, Ledolter J, Sprince NL, et al. Effects of premium discount on workers' compensation claims in agriculture in Finland. *Am J Ind Med*. 2005;48:100–109. https://doi.org/10.1002/ajim.20192
+
 18. Durand-Moreau Q, Descatha A, Adisesh A, Smith P. Presumptive coverage policies and workers' compensation of post-traumatic stress disorder and other mental health conditions: a retrospective time-series study in Canada 2001–2019. *Am J Ind Med*. 2026;69:1027–1036. https://doi.org/10.1002/ajim.70132
+
 19. Koyano F. Trends and commentary on revision of certification criteria for brain/heart disease and mental disorders [in Japanese]. *J Occup Health Law*. 2022;1:105–116. https://doi.org/10.57523/jaohl.1.2_105
-20. Takami T. *Analysis of Consecutive Work, Night Work and Irregular Work in Approved Workers' Compensation Cases of Cerebrovascular and Cardiovascular Disease* [in Japanese]. JILPT Research Material Series No. 297. Tokyo: Japan Institute for Labour Policy and Training; 2026.
+
+20. Takami T. *Analysis of Consecutive Work, Night Work and Irregular Work in Approved Workers' Compensation Cases of Cerebrovascular and Cardiovascular Disease* [in Japanese]. JILPT Research Material Series No. 297. Tokyo: Japan Institute for Labour Policy and Training; February 6, 2026. Available at: https://www.jil.go.jp/institute/siryo/2026/297.html. Accessed November 16, 2026.
+
 21. Labour Standards Act (Act No. 49 of 1947), Article 36, as amended by Act No. 71 of 2018, in force April 1, 2019 (April 1, 2020, for small and medium-sized enterprises) [in Japanese].
-22. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Karoshi and Other Overwork-Related Disorders*, FY2009–FY2025 editions [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; 2010–2026.
-23. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Cerebrovascular and Cardiovascular Diseases*. Material 1, 2nd Meeting of the Expert Committee on Recognition Criteria for Cerebrovascular and Cardiovascular Diseases [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; July 21, 2020. Available at: https://www.mhlw.go.jp/content/11201000/000650614.pdf. Accessed November 14, 2026.
-24. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Mental Disorders*. Material for the 1st Meeting of the Expert Committee on Recognition Criteria for Mental Disorders [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; December 7, 2021. Available at: https://www.mhlw.go.jp/content/11201000/000862995.pdf. Accessed November 14, 2026.
+
+22. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Karoshi and Other Overwork-Related Disorders*, FY2009–FY2025 editions [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; 2010–2026. Latest edition (July 15, 2026) available at: https://www.mhlw.go.jp/stf/newpage_74476.html. Accessed November 16, 2026.
+
+23. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Cerebrovascular and Cardiovascular Diseases*. Material 1, 2nd Meeting of the Expert Committee on Recognition Criteria for Cerebrovascular and Cardiovascular Diseases [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; July 21, 2020. Available at: https://www.mhlw.go.jp/content/11201000/000650614.pdf. Accessed November 16, 2026.
+
+24. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Mental Disorders*. Material for the 1st Meeting of the Expert Committee on Recognition Criteria for Mental Disorders [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; December 7, 2021. Available at: https://www.mhlw.go.jp/content/11201000/000862995.pdf. Accessed November 16, 2026.
+
 25. Ministry of Health, Labour and Welfare. *Policy Evaluation: Pre-analysis Sheets for Policy Objective III-3-1*, FY2024 and FY2025 [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; 2024–2025.
+
 26. Newey WK, West KD. A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica*. 1987;55:703–708. https://doi.org/10.2307/1913610
+
 27. Wagner AK, Soumerai SB, Zhang F, Ross-Degnan D. Segmented regression analysis of interrupted time series studies in medication use research. *J Clin Pharm Ther*. 2002;27:299–309. https://doi.org/10.1046/j.1365-2710.2002.00430.x
+
 28. Lopez Bernal J, Cummins S, Gasparrini A. Interrupted time series regression for the evaluation of public health interventions: a tutorial. *Int J Epidemiol*. 2017;46:348–355. https://doi.org/10.1093/ije/dyw098
+
 29. Lopez Bernal J, Cummins S, Gasparrini A. The use of controls in interrupted time series studies of public health interventions. *Int J Epidemiol*. 2018;47:2082–2093. https://doi.org/10.1093/ije/dyy135
+
 30. von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies. *Lancet*. 2007;370:1453–1457. https://doi.org/10.1016/S0140-6736(07)61602-X
+
 31. Benchimol EI, Smeeth L, Guttmann A, et al. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. *PLoS Med*. 2015;12:e1001885. https://doi.org/10.1371/journal.pmed.1001885
+
 32. Industrial Safety and Health Act (Act No. 57 of 1972), Article 66-8-3, as amended by Act No. 71 of 2018, in force April 1, 2019, and Ordinance on Industrial Safety and Health, Article 52-7-3 [in Japanese].
-33. Ministry of Health, Labour and Welfare. Hatarakikata Susume: work-style reform for construction, drivers and physicians [Web site, in Japanese]. Available at: https://hatarakikatasusume.mhlw.go.jp/. Accessed November 14, 2026.
+
+33. Ministry of Health, Labour and Welfare. Hatarakikata Susume: work-style reform for construction, drivers and physicians [Web site, in Japanese]. Available at: https://hatarakikatasusume.mhlw.go.jp/. Accessed November 16, 2026.
+
 34. Act on Comprehensive Promotion of Labour Policies (Act No. 132 of 1966), Article 30-2, as amended by Act No. 24 of 2019, in force June 1, 2020 (April 1, 2022, for small and medium-sized enterprises) [in Japanese].
 
 ## FIGURE LEGENDS
@@ -201,6 +228,6 @@ All data analyzed are publicly available government statistics. The transcribed 
 
 ## LIST OF SUPPLEMENTAL DIGITAL CONTENT
 
-Supplemental Digital Content 1. Tables S1–S8: content of the revisions, data sources, sensitivity analyses, and approved claims by assessment period and for mental disorders. pdf
+Supplemental Digital Content 1.pdf (Tables S1–S8: content of the revisions, data sources, sensitivity analyses, and approved claims by assessment period and for mental disorders)
 
-Supplemental Digital Content 2. STROBE and RECORD checklist. pdf
+Supplemental Digital Content 2.pdf (STROBE and RECORD checklist)
