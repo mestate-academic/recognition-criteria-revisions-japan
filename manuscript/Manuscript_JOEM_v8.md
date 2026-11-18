@@ -198,7 +198,7 @@ After Japan's 2021 revision of the recognition criteria for overwork-related CCV
 
 24. Ministry of Health, Labour and Welfare. *Status of Workers' Compensation for Mental Disorders*. Material for the 1st Meeting of the Expert Committee on Recognition Criteria for Mental Disorders [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; December 7, 2021. Available at: https://www.mhlw.go.jp/content/11201000/000862995.pdf. Accessed November 16, 2026.
 
-25. Ministry of Health, Labour and Welfare. *Policy Evaluation: Pre-analysis Sheets for Policy Objective III-3-1*, FY2024 and FY2025 [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; 2024–2025.
+25. Ministry of Health, Labour and Welfare. *Policy Evaluation: Pre-analysis Sheets for Policy Objective III-3-1*, FY2024 and FY2025 [in Japanese]. Tokyo: Ministry of Health, Labour and Welfare; 2024–2025. Available at: https://www.mhlw.go.jp/wp/seisaku/hyouka/dl/r06_jizenbunseki/31_III-3-1.pdf and https://www.mhlw.go.jp/wp/seisaku/hyouka/dl/r07_jizenbunseki/30_III-3-1.pdf. Accessed November 18, 2026.
 
 26. Newey WK, West KD. A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica*. 1987;55:703–708. https://doi.org/10.2307/1913610
 
