@@ -19,14 +19,14 @@ Checks: for every year the items sum to the published totals of decisions and ap
 i.e., each claim is assigned to exactly one event. FY2022 is also available on the 2020 item list (FY2022 edition);
 group totals on the two lists differ by at most 3 decisions and 0 approved claims.
 Groups used in the analysis (constant across item lists):
-  harassment = power harassment (item added June 2020) + assault/severe bullying/harassment (before 2020:
+  harassment = power harassment involving a power imbalance (item added June 2020) + assault/severe bullying/harassment (before 2020:
                "(severe) harassment, bullying, or assault") + sexual harassment + serious misconduct by customers
                (item added September 2023)
   conflict   = other interpersonal-relations items (trouble with a superior, coworker or subordinate; changes in
                workplace relationships)
   workload   = type 3 (quantity and quality of work, including overtime of >=80 h per month and >=2 weeks of
                consecutive work)
-  accident   = type 1; failure = type 2; role = type 4; special = "special events"; none = "other" (no assessable event)
+  accident   = type 1; failure = type 2; role = type 4; special = "special events"; none = residual "other" row (includes claims with no assessable event)
 """
 import pandas as pd
 OLD = dict(

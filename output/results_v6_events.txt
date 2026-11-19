@@ -39,7 +39,7 @@ Special events
    FY2017-2019: dec 60.3, appr 60.3, appr% 100.0, share of appr 12.2%, share of dec 3.9%
    FY2020-2022: dec 59.3, appr 59.3, appr% 100.0, share of appr 9.1%, share of dec 3.0%
    FY2024-2025: dec 76.5, appr 76.0, appr% 99.3, share of appr 7.1%, share of dec 2.1%
-No assessable event
+Other event category
    FY2017-2019: dec 90.7, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 5.9%
    FY2020-2022: dec 106.3, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 5.5%
    FY2024-2025: dec 93.0, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 2.5%

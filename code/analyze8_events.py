@@ -12,7 +12,7 @@ def P(*a):
 G=['harassment','conflict','workload','accident','failure','role','special','none']
 LAB=dict(harassment='Harassment, bullying, assault',conflict='Other interpersonal conflicts',workload='Workload',
          accident='Accidents and disasters',failure='Failures and responsibility',role='Changes in role or position',
-         special='Special events',none='No assessable event')
+         special='Special events',none='Other event category')
 T=E.groupby(['fy','group'])[['decisions','approvals']].sum().reset_index()
 W=T.pivot(index='fy',columns='group',values=['decisions','approvals'])
 P('== 1. Annual counts by event group (decisions / approved claims)')
