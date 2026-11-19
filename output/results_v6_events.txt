@@ -1,0 +1,87 @@
+== 1. Annual counts by event group (decisions / approved claims)
+fy     harassment      conflict      workload      accident       failure          role       special          none        total
+2017   250/123       397/24        322/154       185/89        125/32        127/21         63/63         76/0        1545/506
+2018   232/102       350/23        303/140       178/92        126/29        123/24         55/55         94/0        1461/465
+2019   258/121       408/29        327/143       166/83        136/39        126/31         63/63        102/0        1586/509
+2020   398/214       496/23        310/130       247/133       134/31        133/23         54/54        134/0        1906/608
+2021   465/246       587/25        276/140       189/98        123/30        146/27         63/63        104/0        1953/629
+2022   507/286       601/28        265/139       218/131       123/43        130/22         61/61         81/0        1986/710
+2023   646/371       771/33        395/170       280/158       160/46        174/34         71/71         86/0        2583/883
+2024   888/481      1211/45        520/210       246/135       190/58        267/49         79/78         95/0        3496/1056
+2025  1009/538      1386/47        508/183       289/153       203/52        279/35         74/74         91/0        3839/1082
+
+== 2. Period summaries: mean annual decisions, mean annual approved claims, pooled approval %, share of approved claims %
+Harassment, bullying, assault
+   FY2017-2019: dec 246.7, appr 115.3, appr% 46.8, share of appr 23.4%, share of dec 16.1%
+   FY2020-2022: dec 456.7, appr 248.7, appr% 54.5, share of appr 38.3%, share of dec 23.4%
+   FY2024-2025: dec 948.5, appr 509.5, appr% 53.7, share of appr 47.7%, share of dec 25.9%
+Other interpersonal conflicts
+   FY2017-2019: dec 385.0, appr 25.3, appr% 6.6, share of appr 5.1%, share of dec 25.2%
+   FY2020-2022: dec 561.3, appr 25.3, appr% 4.5, share of appr 3.9%, share of dec 28.8%
+   FY2024-2025: dec 1298.5, appr 46.0, appr% 3.5, share of appr 4.3%, share of dec 35.4%
+Workload
+   FY2017-2019: dec 317.3, appr 145.7, appr% 45.9, share of appr 29.5%, share of dec 20.7%
+   FY2020-2022: dec 283.7, appr 136.3, appr% 48.1, share of appr 21.0%, share of dec 14.6%
+   FY2024-2025: dec 514.0, appr 196.5, appr% 38.2, share of appr 18.4%, share of dec 14.0%
+Accidents and disasters
+   FY2017-2019: dec 176.3, appr 88.0, appr% 49.9, share of appr 17.8%, share of dec 11.5%
+   FY2020-2022: dec 218.0, appr 120.7, appr% 55.4, share of appr 18.6%, share of dec 11.2%
+   FY2024-2025: dec 267.5, appr 144.0, appr% 53.8, share of appr 13.5%, share of dec 7.3%
+Failures and responsibility
+   FY2017-2019: dec 129.0, appr 33.3, appr% 25.8, share of appr 6.8%, share of dec 8.4%
+   FY2020-2022: dec 126.7, appr 34.7, appr% 27.4, share of appr 5.3%, share of dec 6.5%
+   FY2024-2025: dec 196.5, appr 55.0, appr% 28.0, share of appr 5.1%, share of dec 5.4%
+Changes in role or position
+   FY2017-2019: dec 125.3, appr 25.3, appr% 20.2, share of appr 5.1%, share of dec 8.2%
+   FY2020-2022: dec 136.3, appr 24.0, appr% 17.6, share of appr 3.7%, share of dec 7.0%
+   FY2024-2025: dec 273.0, appr 42.0, appr% 15.4, share of appr 3.9%, share of dec 7.4%
+Special events
+   FY2017-2019: dec 60.3, appr 60.3, appr% 100.0, share of appr 12.2%, share of dec 3.9%
+   FY2020-2022: dec 59.3, appr 59.3, appr% 100.0, share of appr 9.1%, share of dec 3.0%
+   FY2024-2025: dec 76.5, appr 76.0, appr% 99.3, share of appr 7.1%, share of dec 2.1%
+No assessable event
+   FY2017-2019: dec 90.7, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 5.9%
+   FY2020-2022: dec 106.3, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 5.5%
+   FY2024-2025: dec 93.0, appr 0.0, appr% 0.0, share of appr 0.0%, share of dec 2.5%
+All claims
+   FY2017-2019: dec 1530.7, appr 493.3, appr% 32.2, share of appr 100.0%, share of dec 100.0%
+   FY2020-2022: dec 1948.3, appr 649.0, appr% 33.3, share of appr 100.0%, share of dec 100.0%
+   FY2024-2025: dec 3667.5, appr 1069.0, appr% 29.1, share of appr 100.0%, share of dec 100.0%
+
+== 3. Annual shares and approval proportions
+2017 harassment: share of approved claims 24.3% approval % 49.2 | conflict: share of decisions 25.7% approval % 6.0 | workload approval % 47.8 | all approval % 32.8
+2018 harassment: share of approved claims 21.9% approval % 44.0 | conflict: share of decisions 24.0% approval % 6.6 | workload approval % 46.2 | all approval % 31.8
+2019 harassment: share of approved claims 23.8% approval % 46.9 | conflict: share of decisions 25.7% approval % 7.1 | workload approval % 43.7 | all approval % 32.1
+2020 harassment: share of approved claims 35.2% approval % 53.8 | conflict: share of decisions 26.0% approval % 4.6 | workload approval % 41.9 | all approval % 31.9
+2021 harassment: share of approved claims 39.1% approval % 52.9 | conflict: share of decisions 30.1% approval % 4.3 | workload approval % 50.7 | all approval % 32.2
+2022 harassment: share of approved claims 40.3% approval % 56.4 | conflict: share of decisions 30.3% approval % 4.7 | workload approval % 52.5 | all approval % 35.8
+2023 harassment: share of approved claims 42.0% approval % 57.4 | conflict: share of decisions 29.8% approval % 4.3 | workload approval % 43.0 | all approval % 34.2
+2024 harassment: share of approved claims 45.5% approval % 54.2 | conflict: share of decisions 34.6% approval % 3.7 | workload approval % 40.4 | all approval % 30.2
+2025 harassment: share of approved claims 49.7% approval % 53.3 | conflict: share of decisions 36.1% approval % 3.4 | workload approval % 36.0 | all approval % 28.2
+
+== 4. Relative change in count ratios, quasi-Poisson with year fixed effects, FY2017-2025 excluding FY2023
+   (after the 2020 revision; further change after the 2023 revision; dispersion)
+   Approved claims: harassment group vs all other groups: 2.04 (1.67-2.48); 1.47 (1.25-1.72); dispersion 1.68
+   Decisions: harassment group vs all other groups: 1.59 (1.36-1.87); 1.14 (1.00-1.29); dispersion 2.55
+   Decisions: other interpersonal conflicts vs all other groups: 1.20 (1.04-1.39); 1.35 (1.20-1.53); dispersion 2.82
+   Approved claims: other interpersonal conflicts vs all other groups: 0.75 (0.67-0.84); 1.11 (1.00-1.23); dispersion 0.11
+   Approved claims: workload group vs all other groups: 0.63 (0.54-0.75); 0.85 (0.72-1.00); dispersion 1.09
+
+== 5. Selected items (decisions / approved claims)
+   power_harassment: 2020: 180/99, 2021: 242/125, 2022: 257/147, 2023: 289/157, 2024: 389/224, 2025: 403/222
+   bullying_assault: 2017: 186/88, 2018: 178/69, 2019: 174/79, 2020: 128/71, 2021: 126/61, 2022: 148/73, 2023: 118/59, 2024: 101/44, 2025: 133/62
+   sexual_harassment: 2017: 64/35, 2018: 54/33, 2019: 84/42, 2020: 90/44, 2021: 97/60, 2022: 102/66, 2023: 156/103, 2024: 191/105, 2025: 233/127
+   customer_misconduct: 2023: 83/52, 2024: 207/108, 2025: 240/127
+   trouble_superior: 2017: 320/22, 2018: 255/18, 2019: 294/21, 2020: 388/14, 2021: 451/17, 2022: 475/23, 2023: 599/21, 2024: 953/38, 2025: 1061/36
+   overtime_80h: 2017: 61/41, 2018: 68/45, 2019: 54/32, 2020: 52/31, 2021: 36/28, 2022: 27/21, 2023: 61/35, 2024: 88/51, 2025: 90/40
+
+== 6. "Other" overtime category (approved claims) beside approved claims in the harassment group
+   2017: Other overtime category 144; harassment group 123; harassment + accidents + special events 275
+   2018: Other overtime category 112; harassment group 102; harassment + accidents + special events 249
+   2019: Other overtime category 160; harassment group 121; harassment + accidents + special events 267
+   2020: Other overtime category 279; harassment group 214; harassment + accidents + special events 401
+   2021: Other overtime category 305; harassment group 246; harassment + accidents + special events 407
+   2022: Other overtime category 360; harassment group 286; harassment + accidents + special events 478
+   2023: Other overtime category 528; harassment group 371; harassment + accidents + special events 600
+   2024: Other overtime category 615; harassment group 481; harassment + accidents + special events 694
+   2025: Other overtime category 699; harassment group 538; harassment + accidents + special events 765

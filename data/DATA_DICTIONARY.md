@@ -120,3 +120,19 @@ These files are transcribed in the same way as in https://github.com/mestate-aca
 | `rosai_mental_by_industry.csv` | mental disorders by industry: `fy`, `industry` (Japanese Standard Industrial Classification divisions), `approvals`, `claims` | Annual reports, table 2-2 |
 | `rosai_cvd_by_industry.csv` | CCVD by industry: `fy`, `industry`, `cvd_claims`, `cvd_approvals` | Annual reports, table 1-2 |
 | `employment_by_industry.csv` | employed persons by industry, in 10,000 persons; `year` (calendar year), used as the denominator for the fiscal year beginning in that year | Statistics Bureau of Japan, Labour Force Survey, basic tabulation, table 2-5-1, annual averages |
+
+
+## mental_events.csv
+
+Decisions and approved claims for mental disorders by event, FY2017–2025 (one row per fiscal year and item).
+
+| Column | Content |
+|---|---|
+| `fy` | Fiscal year |
+| `item_list` | `old` = list of events in force before September 2023 (power harassment added June 2020); `new` = list of September 2023 (FY2022 restated on this list in the FY2023 edition) |
+| `type` | Event type in the criteria (accident, failure, workload, role, interpersonal) or power_harassment, sexual_harassment, special, none |
+| `item` | Specific event |
+| `group` | Event group used in the analysis (harassment, conflict, workload, accident, failure, role, special, none) |
+| `decisions`, `approvals` | Decided claims and approved claims |
+
+Sources and checks are listed in `code/build_events.py`. Each decided claim is assigned to one event; for every year the items sum to the totals in `mental_national.csv`.

@@ -11,4 +11,5 @@ echo "5/6 evaluation-period analyses and alternative inference (revision 1)"; py
 echo "6/6 figures (PNG and TIFF 600 dpi)";       python3 code/make_figures_en.py >/dev/null 2>&1
 echo "7/8 additional analyses for the current version (excluded years, placebo models, decisions)"; python3 code/analyze7_joem.py >/dev/null 2>&1
 echo "8/8 figures for the current version (PNG and PDF)"; python3 code/make_figures_joem.py >/dev/null 2>&1; python3 code/make_figures_ih.py >/dev/null 2>&1
+echo "9/9 mental disorder claims by event group (data/mental_events.csv, output/results_v6_events.txt)"; python3 code/build_events.py >/dev/null 2>&1; python3 code/analyze8_events.py >/dev/null 2>&1
 echo "done: see output/"
