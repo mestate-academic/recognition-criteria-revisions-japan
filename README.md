@@ -4,7 +4,7 @@ Data and code for the manuscript "Workers' Compensation for Overwork-Related Dis
 
 Repository: https://github.com/mestate-academic/recognition-criteria-revisions-japan
 
-Status: manuscript under submission. The current version of the manuscript is in `manuscript/`. Its additional analyses are produced by `code/analyze7_joem.py` (`output/results_v5_joem.txt`: models excluding each year in turn, placebo models, models for decisions, dispersion) and its figures by `code/make_figures_joem.py` (`output/JOEM_Figure1`–`JOEM_Figure3`; Figure 2 shows the assessment periods and Figure 3 mental disorders).
+Status: manuscript under submission. The current version of the manuscript is in `manuscript/`. Its additional analyses are produced by `code/analyze7_joem.py` (`output/results_v5_joem.txt`: models excluding each year in turn, placebo models, models for decisions, dispersion) and its figures by `code/make_figures_ih.py` (`output/IH_Fig1`–`IH_Fig3`; Fig. 2 shows the assessment periods and Fig. 3 mental disorders). `code/make_figures_ih.py` differs from `code/make_figures_joem.py` only in one legend label: the mental disorder category reported as "Other" is labelled "Other" category, because official descriptions of that category are not entirely consistent (see the manuscript, Subjects and Methods).
 
 ## What is here
 
