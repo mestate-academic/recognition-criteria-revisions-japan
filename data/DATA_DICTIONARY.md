@@ -79,7 +79,7 @@ Sources:
 | column | meaning |
 |---|---|
 | `fy` | fiscal year, 2017–2025 |
-| `band` | overtime in the month before onset: `lt20`, `20_40`, `40_60`, `60_80`, `80_100`, `100_120`, `120_140`, `140_160`, `ge160` (hours); `other` = judged work-related without the need to examine working hours (その他) |
+| `band` | overtime in the month before onset: `lt20`, `20_40`, `40_60`, `60_80`, `80_100`, `100_120`, `120_140`, `140_160`, `ge160` (hours); `other` = the reported "Other" category (その他); overtime is not quantified, and official descriptions differ (see the manuscript, Subjects and Methods, Data) |
 | `n` | approvals |
 
 Sources (annual reports, table 2-6, unless noted):
