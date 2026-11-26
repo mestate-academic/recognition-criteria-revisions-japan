@@ -4,7 +4,7 @@ Data and code for the manuscript "Workers' Compensation for Overwork-Related Dis
 
 Repository: https://github.com/mestate-academic/recognition-criteria-revisions-japan
 
-Status: manuscript under submission. The current version of the manuscript is in `manuscript/`. Its additional analyses are produced by `code/analyze7_joem.py` (`output/results_v5_joem.txt`: models excluding each year in turn, placebo models, models for decisions, dispersion) and its figures by `code/make_figures_ih.py` (`output/IH_Fig1`–`IH_Fig3`; Fig. 2 shows the assessment periods and Fig. 3 mental disorders). The event-category analysis for mental disorders (decisions and approved claims by event, FY2017–2025) is built by `code/build_events.py` (`data/mental_events.csv`; every year sums to the published totals) and analysed by `code/analyze8_events.py` (`output/results_v6_events.txt`). `code/make_figures_ih.py` differs from `code/make_figures_joem.py` only in one legend label: the mental disorder category reported as "Other" is labelled "Other" category, because official descriptions of that category are not entirely consistent (see the manuscript, Subjects and Methods).
+Status: manuscript under submission. The manuscript text is not included in this repository. Its additional analyses are produced by `code/analyze7_joem.py` (`output/results_v5_joem.txt`: models excluding each year in turn, placebo models, models for decisions, dispersion) and its figures by `code/make_figures_ih.py` (`output/IH_Fig1`–`IH_Fig3`; Fig. 2 shows the assessment periods and Fig. 3 mental disorders). The event-category analysis for mental disorders (decisions and approved claims by event, FY2017–2025) is built by `code/build_events.py` (`data/mental_events.csv`; every year sums to the published totals) and analysed by `code/analyze8_events.py` (`output/results_v6_events.txt`). `code/make_figures_ih.py` differs from `code/make_figures_joem.py` only in one legend label: the mental disorder category reported as "Other" is labelled "Other" category, because official descriptions of that category are not entirely consistent (see the manuscript, Subjects and Methods).
 
 ## What is here
 
@@ -13,7 +13,6 @@ Status: manuscript under submission. The current version of the manuscript is in
 | `data/` | Transcribed public statistics (CSV, UTF-8). See `data/DATA_DICTIONARY.md` for every file, column and source. This dictionary is also Supplementary Table S4 of the paper. |
 | `code/` | Python scripts that build the datasets, run the analyses and draw the figures. |
 | `output/` | Results as text files (`results_*.txt`), intermediate CSVs and Figures 1–3 (PNG for viewing; TIFF at 600 dpi for submission). These are produced by the code. |
-| `manuscript/` | Manuscript text (Markdown). |
 | `supplement/` | Supplementary material in Japanese (補足資料): Tables S1–S9 and Figure S1 (`Supplement_JA.md`, `Supplement_JA.pdf`). Figures with Japanese labels are `output/JOSH_*.png`, drawn by `code/make_figures_josh.py`. |
 
 All data are aggregate statistics published by the Japanese government; no individual-level data are included.
