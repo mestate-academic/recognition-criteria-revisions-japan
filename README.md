@@ -14,6 +14,7 @@ Status: manuscript under submission. The current version of the manuscript is in
 | `code/` | Python scripts that build the datasets, run the analyses and draw the figures. |
 | `output/` | Results as text files (`results_*.txt`), intermediate CSVs and Figures 1–3 (PNG for viewing; TIFF at 600 dpi for submission). These are produced by the code. |
 | `manuscript/` | Manuscript text (Markdown). |
+| `supplement/` | Supplementary material in Japanese (補足資料): Tables S1–S9 and Figure S1 (`Supplement_JA.md`, `Supplement_JA.pdf`). Figures with Japanese labels are `output/JOSH_*.png`, drawn by `code/make_figures_josh.py`. |
 
 All data are aggregate statistics published by the Japanese government; no individual-level data are included.
 
